@@ -1,0 +1,42 @@
+class Header {
+	 
+	gameType = Sandbox; 
+	minPlayers = 1;
+	maxPlayers = 128; 
+	playerCountMultipleOf = 1;
+}; //Neupravovat
+
+//Kde je neupravovat, tak to vážně neupravujte...
+	
+
+class Params {
+	#include "cfgParams.hpp"
+};
+
+class CfgFunctions {
+	#include "functions.hpp"
+};
+
+onLoadMission = "Oficialni TFR Framework v3.4 by Brebera"; 
+OnLoadName = "TFR Zeus Framework v3.4";
+OnLoadIntro = "Oficialni TFR Framework v3.4 by Brebera"; //Neupravovat
+OnLoadMissionTime = 1; //Neupravovat
+OnloadIntroTime = 1; //Neupravovat
+
+
+author = "Brebera";
+
+scriptedPlayer = 1;
+joinUnassigned = 1; //Neupravovat
+respawn = 3; //Neupravovat
+respawnDelay = 999999; //Neupravovat
+respawnButton = 0; //Neupravovat
+disabledAI = 1; //Neupravovat
+enableDebugConsole = 1; //Neupravovat
+
+
+
+	
+	
+
+	
