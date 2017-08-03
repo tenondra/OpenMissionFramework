@@ -1,6 +1,0 @@
-if (!isDedicatred) exitWith {};
-ZeusPool = ["Zeus1","Zeus2"];
-while (True) do {
-	uiSleep 10;
-	{_x assignCurator randomZeus} forEach ZeusPool;
-};

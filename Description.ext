@@ -26,7 +26,7 @@ OnloadIntroTime = 1; //Neupravovat
 
 author = "Brebera";
 
-scriptedPlayer = 1;
+scriptedPlayer = 1; //Neupravovat
 joinUnassigned = 1; //Neupravovat
 respawn = 3; //Neupravovat
 respawnDelay = 999999; //Neupravovat
