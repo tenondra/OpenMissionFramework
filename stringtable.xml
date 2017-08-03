@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="TFROD Framework">
+	<Package name="TFROD Framework">
+		<Container name="">
+			<Key ID="Debug_mode">
+				<English> Debug mode </English>
+				<Czech> Testovací režim </Czech>
+				<German> Debug-Modus </German>
+			</Key>
+			<Key ID="Time_of_day_op0">
+				<English> Morning </English>
+				<Czech> Ráno </Czech>
+				<German> Morgen </German>
+			</Key>
+			<Key ID="Time_of_day_op1">
+				<English> Noon </English>
+				<Czech> Poledne </Czech>
+				<German> Mittag </German>
+			</Key>
+			<Key ID="Time_of_day_op2">
+				<English> Evening </English>
+				<Czech> Večer </Czech>
+				<German> Abend </German>
+			</Key>
+			<Key ID="Time_of_day_op3">
+				<English> Night </English>
+				<Czech> Noc </Czech>
+				<German> Nacht </German>
+			</Key>
+			<Key ID="Safe_zone">
+				<English> Safe zone </English>
+				<Czech> Bezpečná oblast </Czech>
+				<German>  </German>
+			</Key>
+			<Key ID="STR_f_param_AISkill_INDP">
+				<English> AI Skill </English>
+				<Czech> Úroveň AI </Czech>
+				<German> KI Stärke </German>
+			</Key>
+		</Container>
+	</Package>
+</Project

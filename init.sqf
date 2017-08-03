@@ -2,8 +2,10 @@
 coldstart = true;
 publicVariable "coldstart";
 //Initialize scripts
-execVM "scripts\safezone.sqf";
-execVM "f\safeStart\f_safeStart.sqf";
+execVM "tfrf\safezone.sqf";
+execVM "tfrf\coldStart.sqf";
+execVM "tfrf\coldStartLoop.sqf";
+execVM "tfrf\safety.sqf";
 
 //Turn off AI callouts, arty computer, saving and player's and AI's voice
 enableSaving [false, false];
