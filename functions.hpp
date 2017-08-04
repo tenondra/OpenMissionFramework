@@ -1,6 +1,9 @@
-class F {
-	class safeStart{
-		file ="f\safeStart";
-		class safety{};
+class tfrf {
+	tag = "tfrf";
+	class functions {
+		file = "tfrf\zeus\fnc_checkZeus";
+	};
+	class functions {
+		file = "tfrf\zeus\fnc_checkZeus"
 	};
 };
