@@ -34,7 +34,7 @@ class tfrf_param_weather
 		default = 0;
 	};
 
-class tfrf_param__fog
+class tfrf_param_fog
 {
     title = "Override Fog";
     values[] = {0,1,2,4};
@@ -42,10 +42,45 @@ class tfrf_param__fog
     default = 4;
 };
 
-class tfrf_param__wind
+class tfrf_param_wind
 {
     title = "Override Wind";
     values[] = {0,1,2,4};
     texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
     default = 4;
 };
+
+class tfrf_param_szW
+{
+    title = "Override Wind";
+    values[] = {0,1,2,4};
+    texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+    default = 4;
+};
+
+class tfrf_param_szE
+{
+    title = "Override Wind";
+    values[] = {0,1,2,4};
+    texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+    default = 4;
+};
+
+class tfrf_param_szI
+{
+    title = "Override Wind";
+    values[] = {0,1,2,4};
+    texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+    default = 4;
+};
+
+class tfrf_param_szC
+{
+    title = "Override Wind";
+    values[] = {0,1,2,4};
+    texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+    default = 4;
+};
+
+
+

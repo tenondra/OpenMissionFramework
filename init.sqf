@@ -2,10 +2,14 @@
 coldstart = true;
 publicVariable "coldstart";
 //Initialize scripts
-execVM "tfrf\safezone.sqf";
-execVM "tfrf\coldStart.sqf";
-execVM "tfrf\coldStartLoop.sqf";
-execVM "tfrf\safety.sqf";
+nul= execVM "tfrf\safezone.sqf";
+
+nul= execVM "tfrf\coldstart\coldStart.sqf";
+nul=execVM "tfrf\zeus\zeusFix.sqf";
+
+nul= execVM "tfrf\zeus\tfrf_fnc_checkZeus.sqf";
+nul= execVM "tfrf\coldstart\tfrf_fnc_safety.sqf";
+
 
 //Turn off AI callouts, arty computer, saving and player's and AI's voice
 enableSaving [false, false];
