@@ -1,5 +1,5 @@
 // Run the loop only on the server
-if !(isServer) exitWith {};
+if (!isServer) exitWith {};
 
 private ["_time","_minutes","_msg"];
 _time = 0;
@@ -7,11 +7,11 @@ _minutes = 0;
 
 sleep 2;
 
-if (isNil "coldstart") then {
-	coldstart = ["coldstart",true] call BIS_fnc_getParamValue;
+if (isNil coldstart) then {
+	missionNamespace setVariable ["coldstart", true];
 };
 
-while {coldstart} do {
+while (coldstart) do {
 	uisleep 1;
 	// If mission timer has been terminated by admin briefing, simply exit
 	if (coldstart != true) exitWith {};

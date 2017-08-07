@@ -4,7 +4,7 @@ tfrf_fnc_safety ={
 	//=====================================================================================
 
 	//Exit if server
-	if(isDedicated) exitwith {};
+	if(isServer) exitwith {};
 
 	switch (_this select 0) do
 	{

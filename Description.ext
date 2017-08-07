@@ -4,23 +4,15 @@ class Header {
 	minPlayers = 1;
 	maxPlayers = 128; 
 	playerCountMultipleOf = 1;
-}; //Neupravovat
-
+};
 //Kde je neupravovat, tak to vážně neupravujte...
 	
-
-/*
 class Params {
 	#include "cfgParams.hpp"
 };
-*/
 
-class CfgFunctions {
-	#include "functions.hpp"
-};
-
-onLoadMission = "Oficialni TFR Framework v3.4 by Brebera"; 
-OnLoadName = "Oficialni TFR Framework v3.4 by Brebera";
+onLoadMission = "TFRF v3.4 by Brebera"; 
+OnLoadName = "TFRF v3.4 by Brebera";
 OnLoadIntro = "TFRF v3.4 by Brebera"; //Neupravovat
 OnLoadMissionTime = 1; //Neupravovat
 OnloadIntroTime = 1; //Neupravovat
@@ -33,14 +25,7 @@ joinUnassigned = 1; //Neupravovat
 respawn = 3; //Neupravovat
 respawnDelay = 999999; //Neupravovat
 respawnButton = 0; //Neupravovat
-respawnOnStart = 1; //Neupravovat
+respawnOnStart = 0; //Neupravovat
 
 disabledAI = 1; //Neupravovat
 enableDebugConsole = 1; //Neupravovat
-
-
-
-	
-	
-
-	

@@ -1,9 +1,7 @@
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
-
 //Uvitani hrace script, nechat server
-private ["_infohrac","_infohracarr1","_infohracarr2","_server","_msg"];
+private ["_infohrac","_infohracarr1","_infohracarr2","_msg"];
 
-_server = "TFROD BOT";
 _infohrac = squadParams player;
 _infohracarr1 = _infohrac select 0;
 _infohracarr2 = _infohrac select 1;
@@ -13,29 +11,9 @@ player enableSimulation false;
 sleep 5;
 hint parseText "<t color='#e32525'>Čekám na sync serveru...</t> ";
 sleep 10;
-hintSilent parseText "<t color='#e32525'>|</t>";
-sleep 0.5;
-hintSilent parseText "<t color='#e32525'>/</t>";
-sleep 0.5;
-hintSilent parseText "<t color='#e32525'>-</t>";
-sleep 0.5;
-hintSilent parseText "<t color='#e32525'>\</t>";
-sleep 0.5;
-hintSilent parseText "<t color='#e32525'>|</t>";
-sleep 0.5;
-hintSilent parseText "<t color='#e32525'>/</t>";
-sleep 0.5;
-hintSilent parseText "<t color='#e32525'>-</t>";
-sleep 0.5;
-hintSilent parseText "<t color='#e32525'>\</t>";
-sleep 0.5;
-hintSilent parseText "<t color='#e32525'>|</t>";
-sleep 0.5;
 hint parseText "<t color='#00ff00'>Synchronizováno!</t> ";
-sleep 1.5;
+sleep 2;
 player enableSimulation true;
-
-
 
 hint parseText format ["<t align='center' size='2.0'>TFROD SRS MISE</t><br />
 Hráč: %1; TFROD Framework v3.4 inicializován. Vítej!<br /> <br />
