@@ -1,3 +1,9 @@
+//=====================================================================================
+// TFRF Fix nefunnkčího Zeuse - jak pro samotnou Armu tak TFAR
+// Credits: Brebera
+// Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
+//=====================================================================================
+
 sleep 5;
 
 if (!isServer) exitWith {};
