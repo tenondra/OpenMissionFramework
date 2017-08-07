@@ -10,6 +10,14 @@ class Header {
 class Params {
 	#include "cfgParams.hpp"
 };
+class CfgNotifications {
+	class Start {
+		title = "Zeus zahajuje misi";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
+		description = "%1";
+		priority = 10;
+	};
+};
 
 onLoadMission = "TFRF v3.4 by Brebera"; 
 OnLoadName = "TFRF v3.4 by Brebera";

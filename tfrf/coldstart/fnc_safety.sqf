@@ -1,16 +1,20 @@
-tfrf_fnc_safety ={
-	// F3 - Safe Start, Safety Toggle
-	// Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
-	//=====================================================================================
+//=====================================================================================
+// TFRF Cold Start - safety script
+// Credits: Brebera
+// Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
+//=====================================================================================
 
-	//Exit if server
+tfrf_fnc_safety ={
+
+	//Exit pokud server
 	if(isServer) exitwith {};
 
 	switch (_this select 0) do
 	{
-		//Turn safety on
+		//Přepnout safety on
 		case true:
 		{
+			player allowDamage false;
 			// Delete bullets from fired weapons
 			if (isNil "f_eh_safetyMan") then {
 				f_eh_safetyMan = player addEventHandler["Fired", {deletevehicle (_this select 6);}];
@@ -27,7 +31,6 @@ tfrf_fnc_safety ={
 			};
 
 			// Make player invincible
-			player allowDamage false;
 		};
 
 		//Turn safety off
@@ -52,7 +55,7 @@ tfrf_fnc_safety ={
 			};
 
 			// Make player vulnerable
-			player allowDamage true;
+			{_x allowDamage true} forEach playableUnits;
 		};
 	};
 };

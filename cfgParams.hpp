@@ -1,9 +1,8 @@
-class ace_repair_engineerSetting_repair {
+class coldstart {
     title = "Cold Start - hráči nebudou na začátku schopni zranit se ani střílet - default: ANO";
     values[] = {true,false};
     texts[] =  {"Ano", "Ne"};
     default = true;
-    typeName = "SCALAR";
     function = "";
     isGlobal = 1;
 };
@@ -24,7 +23,6 @@ class tfrf_param_safeZone {
     values[] = {false,true,"BLUF","OPF","IND"};
     texts[] =  {"Ne", "Ne - určí Zeus"};
     default = true;
-    typeName = "SCALAR";
     isGlobal = 1;
 };
 
@@ -91,6 +89,20 @@ class tfrf_param_szC
     values[] = {0,1,2,4};
     texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
     default = 4;
+};
+
+class GuerFriendly
+{
+	title = Nezávislí - přátelé s;
+	values[] = {-1,1,0,2};
+	texts[] = {
+		Nikým,
+		BLUFOR,
+		OPFOR,
+		Všemi
+	};
+	default = -1;
+	function = "BIS_fnc_paramGuerFriendly";
 };
 
 

@@ -1,3 +1,11 @@
+//=====================================================================================
+// TFRF Safe zóny na spawnech
+// Credits: Brebera
+// Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
+//=====================================================================================
+
+
+
 private ["_PlayerInAreas","_OldPlayerInAreas","_TriggerList","_Debug","_MarkerName","_Pos","_SpawnProtection","_InZoneArea","_SideZone","_friendlies"];
 
 //--- Spawn Protection ---//
@@ -44,7 +52,7 @@ _SpawnProtection setTriggerActivation ["ANY","PRESENT",true];
 _SpawnProtection setTriggerStatements ["","",""];
 _TriggerList set [ count _TriggerList, [_SpawnProtection, EAST]];
 //--- Initialization for an area ---//
-if (isNil "safezone_guerrila") then exitWith {diag_log "Marker safezone_guerrila missing!"};
+if (isNil "safezone_guerrila") then {diag_log "Marker safezone_guerrila missing!"};
 _MarkerName	= "safezone_guerrila";
 _Pos = getMarkerPos _MarkerName;
 _SpawnProtection = createTrigger ["EmptyDetectorG",_Pos];

@@ -1,17 +1,25 @@
+//=====================================================================================
+// TFRF Cold Start - Init
+// Credits: Brebera
+// Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
+//=====================================================================================
+
+//Jestli neexistuje "coldstart" var, vytvořit ji - nastavit true
 if (isNil "coldstart") then {
 	missionNamespace setVariable ["coldstart", true];
 };
 
+//Pokud coldstart = true
 if (coldstart) then
 {
-	// The server will handle the loop and notifications
+	// Server se postará o loop a notifikace
 	if (isServer) then {
 		[] execVM "tfrf\coldstart\coldStartLoop.sqf";
 	};
   "COLD START" remoteExec ["hint"];
 
-	// Enable invincibility for players
+	// Povolit nesmrtelnost pro hráče
 	if (!isServer) then {
-		[true] call tfrf_fnc_safety;
+		[[true],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 	};
 };

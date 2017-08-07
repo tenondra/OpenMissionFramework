@@ -1,3 +1,9 @@
+//=====================================================================================
+// TFRF Respawn script + init
+// Credits: Brebera
+// Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
+//=====================================================================================
+
 private ["_cameraPos","_markerpos","_group","_unit","_camera"];
 
 _cameraPos = getPos player; // get position of dead player
@@ -18,6 +24,6 @@ cutText ["Zemřel jsi. Nyní máš možnost používat spectator mode a komuniko
 [player, true] call TFAR_fnc_forceSpectator;
 execVM "tfrf\tfarspect.sqf";
 
-_unit addEventHandler ["Killed",{hint format ["%1 tě zabil ; Instigator: %2", _this select 1, _this select 2]}];
+player addEventHandler ["Killed",{hint format ["%1 tě zabil ; Instigator: %2", _this select 1, _this select 2]}];
 sleep 30;
 hintSilent "";
