@@ -26,26 +26,28 @@ _TriggerList = [];
 _Debug = false;
 
 //--- Initialization for an area ---//
-_MarkerName	= "SAFETY_ZONES";
+if (isNil "safezone_west") then {diag_log "Marker safezone_west missing!"};
+_MarkerName	= "safezone_west";
 _Pos = getMarkerPos _MarkerName ;
-_SpawnProtection = createTrigger ["EmptyDetector",_Pos];
+_SpawnProtection = createTrigger ["EmptyDetectorW",_Pos];
 _SpawnProtection setTriggerArea [75,75,0,true];
 _SpawnProtection setTriggerActivation ["ANY","PRESENT",true];
 _SpawnProtection setTriggerStatements ["","",""];
 _TriggerList set [ count _TriggerList, [_SpawnProtection, WEST]];
 //--- Initialization for an area ---//
-/*
-_MarkerName	= "respawn_east";
+if (isNil "safezone_east") then {diag_log "Marker safezone_east missing!"};
+_MarkerName	= "safezone_east";
 _Pos = getMarkerPos _MarkerName;
-_SpawnProtection = createTrigger ["EmptyDetector",_Pos];
+_SpawnProtection = createTrigger ["EmptyDetectorE",_Pos];
 _SpawnProtection setTriggerArea [75,75,0,true];
 _SpawnProtection setTriggerActivation ["ANY","PRESENT",true];
 _SpawnProtection setTriggerStatements ["","",""];
 _TriggerList set [ count _TriggerList, [_SpawnProtection, EAST]];
 //--- Initialization for an area ---//
-_MarkerName	= "respawn_guerrila";
+if (isNil "safezone_guerrila") then exitWith {diag_log "Marker safezone_guerrila missing!"};
+_MarkerName	= "safezone_guerrila";
 _Pos = getMarkerPos _MarkerName;
-_SpawnProtection = createTrigger ["EmptyDetector",_Pos];
+_SpawnProtection = createTrigger ["EmptyDetectorG",_Pos];
 _SpawnProtection setTriggerArea [75,75,0,true];
 _SpawnProtection setTriggerActivation ["ANY","PRESENT",true];
 _SpawnProtection setTriggerStatements ["","",""];

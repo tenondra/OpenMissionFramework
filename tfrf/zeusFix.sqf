@@ -4,8 +4,20 @@ if (!isServer) exitWith {};
 
 while {True} do {
 	uiSleep 10;
-	Zeus1 assignCurator GM1;
-	Zeus2 assignCurator GM2;
-	Zeus3 assignCurator GM3;
-	Civil assignCurator GMC1;
+	if (isNil "Zeus1") then {diag_log "No Zeus has been assigned"}
+	else {
+		Zeus1 assignCurator GM1;
+	};
+	if (isNil "Zeus2") then {diag_log "No Zeus has been assigned"}
+	else {
+		Zeus2 assignCurator GM2;
+	};
+	if (isNil "Zeus3") then {diag_log "No Zeus has been assigned"}
+	else {
+		Zeus3 assignCurator GM3;
+	};
+	if (isNil "Civil") then {diag_log "No Zeus has been assigned"}
+	else {
+		Zeus1 assignCurator GMC1;
+	};
 };

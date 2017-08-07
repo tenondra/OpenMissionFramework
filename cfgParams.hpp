@@ -39,31 +39,31 @@ class tfrf_param_daytime {
 
 class tfrf_param_weather
 	{
-		title = "Počasá - default ";
+		title = "Počasí - default ";
 		values[] = {0,1,2,3,4,5,6,7,8,9};
-		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4,$STR_f_param_weather_Option5,$STR_f_param_weather_Option6,$STR_f_param_weather_Option7,$STR_f_param_weather_Option8,$STR_f_param_weather_Option11};
+		texts[] = {};
 		default = 0;
 	};
 
 class tfrf_param_fog
 {
-    title = "Mlha - default: ";
+    title = "Mlha - default: Nastavení mise";
     values[] = {0,1,2,4};
-    texts[] = {"No Fog","Light Fog","Heavy Fog","Use default"};
+    texts[] = {"Bez mlhy","Slabá mlha","Silná mlha","Nastavení mise"};
     default = 4;
 };
 
 class tfrf_param_wind
 {
-    title = "Vítr - default: ";
+    title = "Vítr - default: Nastavení mise";
     values[] = {0,1,2,4};
-    texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
+    texts[] = {"Bez větru","Slabý vítr","Silný vítr","Nastavení mise"};
     default = 4;
 };
 
 class tfrf_param_szW
 {
-    title = "Override Wind";
+    title = "Safe zóna - bezpečný spawn během celé hry - default: NE";
     values[] = {0,1,2,4};
     texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
     default = 4;
@@ -71,7 +71,7 @@ class tfrf_param_szW
 
 class tfrf_param_szE
 {
-    title = "Override Wind";
+    title = "Safe zóna - bezpečný spawn během celé hry - default: NE";
     values[] = {0,1,2,4};
     texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
     default = 4;
@@ -79,7 +79,7 @@ class tfrf_param_szE
 
 class tfrf_param_szI
 {
-    title = "Override Wind";
+    title = "Safe zóna - bezpečný spawn během celé hry - default: NE";
     values[] = {0,1,2,4};
     texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
     default = 4;

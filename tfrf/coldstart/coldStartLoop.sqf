@@ -7,14 +7,14 @@ _minutes = 0;
 
 sleep 2;
 
-if (isNil coldstart) then {
+if (isNil "coldstart") then {
 	missionNamespace setVariable ["coldstart", true];
 };
 
-while (coldstart) do {
+while {coldstart} do {
 	uisleep 1;
 	// If mission timer has been terminated by admin briefing, simply exit
-	if (coldstart != true) exitWith {};
+	if (coldstart == false) exitWith {};
 	// Připočítat jednu sekundu k počítadlu
 	_time = _time + 1;
 	publicVariable "_time";

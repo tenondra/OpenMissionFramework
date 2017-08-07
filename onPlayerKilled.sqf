@@ -18,6 +18,6 @@ cutText ["Zemřel jsi. Nyní máš možnost používat spectator mode a komuniko
 [player, true] call TFAR_fnc_forceSpectator;
 execVM "tfrf\tfarspect.sqf";
 
-player addMPEventHandler ["MPKilled",{_nul = _this call tfrf_fnc_killedInfo;}];
-sleep 10;
+_unit addEventHandler ["Killed",{hint format ["%1 tě zabil ; Instigator: %2", _this select 1, _this select 2]}];
+sleep 30;
 hintSilent "";
