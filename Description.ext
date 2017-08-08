@@ -10,6 +10,7 @@ class Header {
 class Params {
 	#include "cfgParams.hpp"
 };
+
 class CfgNotifications {
 	class Start {
 		title = "Zeus zahajuje misi";
@@ -33,7 +34,7 @@ joinUnassigned = 1; //Neupravovat
 respawn = 3; //Neupravovat
 respawnDelay = 999999; //Neupravovat
 respawnButton = 0; //Neupravovat
-respawnOnStart = 0; //Neupravovat
+respawnOnStart = 1; //Neupravovat
 
 disabledAI = 1; //Neupravovat
 enableDebugConsole = 1; //Neupravovat

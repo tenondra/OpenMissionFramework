@@ -19,9 +19,7 @@ if (coldstart) then
   "COLD START" remoteExec ["hint"];
 
 	// Povolit nesmrtelnost pro hráče
-	if (!isServer) then {
-		[true] call tfrf_fnc_safety;
-		//[[true],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
-		//[] execVM "tfrf\coldstart\safety_on.sqf";
+	if (!isDedicated) then {
+		[[true],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 	};
 };

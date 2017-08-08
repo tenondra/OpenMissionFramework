@@ -1,7 +1,13 @@
-
-
+/*
+class ModuleMPTypeGameMaster_F {
+    title = "";
+    values[] = {true,false};
+    texts[] =  {"Ano - spawn z Editoru", "Ne - určí Zeus"};
+    default = false;
+};
+*/
 class coldstart {
-    title = "Cold Start - hráči nebudou na začátku schopni zranit se ani střílet - default: ANO";
+    title = "Cold Start - hráči se nebudou do odstartování mise schopni zranit ani střílet, nebo poškodit a střílet z vozidel";
     values[] = {true,false};
     texts[] =  {"Ano", "Ne"};
     default = true;
@@ -10,7 +16,7 @@ class coldstart {
 };
 
 class GuerFriendly {
-	title = Nezávislí - přátelé s;
+	title = "Nezávislí - přátelé s";
 	values[] = {-1,1,0,2};
 	texts[] = {"Nikým","BLUFOR","OPFOR","Všemi"};
 	default = -1;
@@ -28,10 +34,12 @@ class tfrf_param_daytime {
 class tfrf_param_weather {
 		title = "Počasí - default ";
 		values[] = {0,25,50,75,100};
-		texts[] = {"Slunečno","Oblačno","","Déšť","Bouřka"};
+		texts[] = {"Slunečno","Oblačno","Zataženo","Déšť","Bouřka"};
 		default = 0;
+        function = "BIS_fnc_paramWeather"; 
 };
 
+/*
 class tfrf_param_szW {
     title = "Safe zóna BLUFOR - bezpečný spawn během celé hry";
     values[] = {"safezone_west","none"};
@@ -56,8 +64,6 @@ class tfrf_param_szI {
     function = "tfrf_fnc_removeMarker";
 };
 
-
-/*
 class ModuleMPTypeGameMaster_F {
     title = "Forced spawn - defaultně určený spawn, jinak určí Zeus - default: NE";
     values[] = {true,false};

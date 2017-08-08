@@ -24,7 +24,7 @@ if (isNil "cantriggercold") then {
 };
 
 while {coldstart} do {
-	uisleep 0.05;
+	uisleep 1;
 	// Připočítat jednu sekundu k počítadlu
 	_time = _time + 1;
 
@@ -59,7 +59,6 @@ if (!coldstart && cantriggercold) then {
 			systemChat str _msgg;
 			sleep 1;
 		};
-		//[] execVM "tfrf\coldstart\safety_off.sqf";
 
 		// Remotely execute script to disable safety for all selectable units
 		[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;

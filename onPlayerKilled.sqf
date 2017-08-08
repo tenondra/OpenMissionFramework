@@ -6,6 +6,18 @@
 
 private ["_cameraPos","_markerpos","_group","_unit","_camera","_killer1","_killer2"];
 
+_killer1 = "";
+_killer2 = "";
+
+//Dát hráči info o tom, kdo ho zabil
+player addMPEventHandler ["MPKilled",{
+  _killer1 = (_this select 1);
+  _killer2 = (_this select 2);
+  hint format ["Zabil tě %1 / %2", name _killer1, name _killer2];
+  sleep 1;
+  player removeAllMPEventHandlers "Killed";
+}];
+
 _cameraPos = getPos player; // get position of dead player
 _markerpos = getMarkerPos "specpos"; //locate marker
 _group = createGroup civilian; // create civilian group
@@ -20,7 +32,8 @@ selectPlayer _unit; // switch player to the newly created 'spectator' unit
 _camera = ["GetCamera"] call BIS_fnc_EGSpectator; // get the current camera for spectator
 _cameraPos set [2,10]; // set height of camera
 _camera setPosASL _cameraPos; // move the camera back to where you died.
-player addMPEventHandler ["MPKilled",{_killer1 = _this select 1; _killer2 = _this select 2;cutText [format["Zemřel jsi. Zabil tě %1 / %2. Nyní máš možnost používat spectator mode a komunikovat s již mrtvými hráči.",_killer1,_killer2],"PLAIN",1.5,true];}];
 [player, true] call TFAR_fnc_forceSpectator;
-//execVM "tfrf\tfarspect.sqf";
-sleep 30;
+
+cutText ["Zemřel jsi. Nyní máš možnost používat spectator mode a komunikovat s již mrtvými hráči.","PLAIN",1.5,true];
+sleep 25;
+hintSilent "";

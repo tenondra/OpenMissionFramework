@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=641;
 	class ItemIDProvider
 	{
 		nextID=962;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=55;
+		nextID=57;
 	};
 	class Camera
 	{
-		pos[]={1651.1675,30.382559,5476.5874};
-		dir[]={0.22924471,-0.97164887,-0.058084827};
-		up[]={0.94188493,0.2364385,-0.23864219};
-		aside[]={-0.24560824,1.1692755e-006,-0.96938056};
+		pos[]={1733.6597,27.503429,5670.6401};
+		dir[]={-0.0656128,-0.46795157,0.88133937};
+		up[]={-0.034752719,0.88372564,0.46671399};
+		aside[]={0.99725795,6.8207737e-006,0.07424707};
 	};
 };
 binarizationWanted=0;
@@ -521,7 +521,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=129;
+		items=126;
 		class Item0
 		{
 			dataType="Layer";
@@ -36766,8 +36766,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1788.2235,5.5,5839.0259};
-				angles[]={0,3.3367379,0};
+				position[]={1788.5248,5.5,5839.9229};
+				angles[]={-0,5.1788559,0};
 			};
 			id=909;
 			type="TFAR_ModuleTaskForceRadioEnforceUsage";
@@ -37933,8 +37933,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1788.0216,5.5,5837.5474};
-				angles[]={0,1.833922,0};
+				position[]={1787.9888,5.5,5837.9961};
+				angles[]={-0,3.6760402,0};
 			};
 			id=921;
 			type="TFAR_ModuleTaskForceRadioFrequencies";
@@ -39701,33 +39701,6 @@ class Mission
 		};
 		class Item119
 		{
-			dataType="Marker";
-			position[]={1735.927,0,5721.9082};
-			name="safezone_west";
-			type="Empty";
-			id=951;
-			atlOffset=-5.5;
-		};
-		class Item120
-		{
-			dataType="Marker";
-			position[]={1740.076,0,5742.6528};
-			name="safezone_guerrila";
-			type="Empty";
-			id=952;
-			atlOffset=-5.5;
-		};
-		class Item121
-		{
-			dataType="Marker";
-			position[]={1744.3129,0,5768.6606};
-			name="safezone_east";
-			type="Empty";
-			id=953;
-			atlOffset=-5.5;
-		};
-		class Item122
-		{
 			dataType="Logic";
 			class PositionInfo
 			{
@@ -39740,7 +39713,7 @@ class Mission
 			id=954;
 			type="VirtualCurator_F";
 		};
-		class Item123
+		class Item120
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -39850,7 +39823,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item124
+		class Item121
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -39961,7 +39934,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item125
+		class Item122
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -40072,7 +40045,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item126
+		class Item123
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -40183,12 +40156,13 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item127
+		class Item124
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1787.5389,5.5,5835.522};
+				position[]={1787.4528,5.5,5836.0693};
+				angles[]={-0,1.8421178,0};
 			};
 			id=960;
 			type="TFAR_ModuleTaskForceRadio";
@@ -40330,14 +40304,14 @@ class Mission
 				nAttributes=7;
 			};
 		};
-		class Item128
+		class Item125
 		{
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1779.6558,5.5,5836.772};
+				position[]={1779.656,5.5,5836.772};
 			};
-			presenceCondition="fals";
+			presenceCondition="false";
 			id=961;
 			type="ModuleMPTypeGameMaster_F";
 		};
@@ -40346,11 +40320,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=130;
+			nextID=134;
 		};
 		class Links
 		{
-			items=130;
+			items=134;
 			class Item0
 			{
 				linkID=0;
@@ -41646,6 +41620,46 @@ class Mission
 				linkID=129;
 				item0=402;
 				item1=909;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item130
+			{
+				linkID=130;
+				item0=958;
+				item1=961;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item131
+			{
+				linkID=131;
+				item0=957;
+				item1=961;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item132
+			{
+				linkID=132;
+				item0=956;
+				item1=961;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item133
+			{
+				linkID=133;
+				item0=898;
+				item1=961;
 				class CustomData
 				{
 					type="Sync";

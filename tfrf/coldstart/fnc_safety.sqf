@@ -1,12 +1,12 @@
 //=====================================================================================
 // TFRF Cold Start - safety script
-// Credits: Brebera
+// Credits: F3 Framework, Brebera
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
 
 tfrf_fnc_safety ={
 
-	if (isServer) exitwith {};
+	if (isDedicated) exitwith {};
 
 	switch (_this select 0) do
 	{
@@ -29,7 +29,7 @@ tfrf_fnc_safety ={
 			};
 					// Make player invincible
 					player allowDamage false;
-					false remoteExec ["allowDamage",true, false];
+					//false remoteExec ["allowDamage",true, false];
 		};
 
 		//Turn safety off
