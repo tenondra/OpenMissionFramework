@@ -18,6 +18,10 @@ if (isNil "coldstart") then {
 	missionNamespace setVariable ["coldstart", true];
 };
 
+if (isNil "cantriggercold") then {
+	missionNamespace setVariable ["coldstart", true];
+};
+
 while {coldstart} do {
 	uisleep 1;
 	// If mission timer has been terminated by admin briefing, simply exit
@@ -35,12 +39,13 @@ while {coldstart} do {
 		_sklonovani = "minut";
 	};
 	_time = 0;
-	[[format ["Zbrane jsou cold po dobu %1 %2, cekame na spusteni mise", _minuta, _sklonovani]], "hint", true] call BIS_fnc_MP;
+	[[format ["Zbraně jsou cold již %1 %2, čeká se na start mise", _minuta, _sklonovani]], "hint", true] call BIS_fnc_MP;
 	};
 };
 
 //Once the mission timer has reached 0, disable the safeties
-if (!coldstart) then {
+if (!coldstart && cantriggercold) then {
+		cantriggercold = false;
 		// Broadcast message to players
 		[["Start",["Mise začíná právě teď!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
 		[["Zeus zahajuje misi. Mise začíná právě teď!"], "hint", true] call BIS_fnc_MP;
@@ -49,7 +54,8 @@ if (!coldstart) then {
 			systemChat str _msgg;
 			sleep 1;
 		};
+		[] execVM "tfrf\coldstart\safety_off.sqf";
 
 		// Remotely execute script to disable safety for all selectable units
-		[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		//[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 };
