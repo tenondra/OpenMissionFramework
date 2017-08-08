@@ -6,18 +6,19 @@
 
 tfrf_fnc_safety ={
 
-	//Vynechat server ze scriptu
-	if (isServer) exitwith {};
+		if(isDedicated) exitwith {};
 
 	switch (_this select 0) do
 	{
-		//Zapnout safety
+		//Turn safety on
 		case true:
 		{
-			// Vymazat všechny vystřelené kulky
-			player addEventHandler ["Fired", {deletevehicle (_this select 6);}];
+			// Delete bullets from fired weapons
+			if (isNil "f_eh_safetyMan") then {
+				f_eh_safetyMan = player addEventHandler["Fired", {deletevehicle (_this select 6);}];
+			};
 
-			// Vypnout zbraně a damage pro vozidla, pokud se v něm nachází hráč
+			// Disable guns and damage for vehicles if player is crewing a vehicle
 			if (vehicle player != player && {player in [gunner vehicle player,driver vehicle player,commander vehicle player]}) then {
 				player setVariable ["f_var_safetyVeh",vehicle player];
 				(player getVariable "f_var_safetyVeh") allowDamage false;
@@ -27,21 +28,22 @@ tfrf_fnc_safety ={
 				};
 			};
 
-			//Udělat hráče nesmrtelného
-			{_x allowDamage false} forEach playableUnits;
+			// Make player invincible
+			player allowDamage false;
+			player AddEventHandler ["HandleDamage", {False}];
 		};
 
-		//Vypnout safety
+		//Turn safety off
 		case false;
 		default {
 
-			//Povolit hráči střílet ze zbraní
+			//Allow player to fire weapons
 			if !(isNil "f_eh_safetyMan") then {
 				player removeEventhandler ["Fired", f_eh_safetyMan];
 				f_eh_safetyMan = nil;
 			};
 
-			// Zpátky povolit zbraně a damage pro vozidla ve kterých se nachází hráči
+			// Re-enable guns and damage for vehicles if they were disabled
 			if !(isNull(player getVariable ["f_var_safetyVeh",objnull])) then {
 				(player getVariable "f_var_safetyVeh") allowDamage true;
 
@@ -52,8 +54,8 @@ tfrf_fnc_safety ={
 				player setVariable ["f_var_safetyVeh",nil];
 			};
 
-			//Udělat hráče zranitelného
-			{_x allowDamage true} forEach playableUnits;
+			// Make player vulnerable
+			player allowDamage true;
 		};
 	};
 };

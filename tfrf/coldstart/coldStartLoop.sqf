@@ -35,7 +35,7 @@ while {coldstart} do {
 	if (_minuta >1 && _minuta < 5) then {
 		_sklonovani = "minuty";
 	};
-	if (_minuta > 5) then {
+	if (_minuta > 4) then {
 		_sklonovani = "minut";
 	};
 	_time = 0;
@@ -54,8 +54,8 @@ if (!coldstart && cantriggercold) then {
 			systemChat str _msgg;
 			sleep 1;
 		};
-		[] execVM "tfrf\coldstart\safety_off.sqf";
+		//[] execVM "tfrf\coldstart\safety_off.sqf";
 
 		// Remotely execute script to disable safety for all selectable units
-		//[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 };

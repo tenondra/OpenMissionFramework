@@ -34,31 +34,28 @@ class tfrf_param_weather {
 
 class tfrf_param_szW {
     title = "Safe zóna BLUFOR - bezpečný spawn během celé hry";
-    values[] = {0,1};
-    texts[] = {"No Wind","Light Wind"};
-    default = 0;
+    values[] = {"safezone_west","none"};
+    texts[] = {"Ne","Ano"};
+    default = "safezone_west";
+    function = "tfrf_fnc_removeMarker";
 };
 
 class tfrf_param_szE {
     title = "Safe zóna OPFOR - bezpečný spawn během celé hry";
     values[] = {0,1};
-    texts[] = {"No Wind","Light Wind"};
-    default = 0;
+    texts[] = {"safezone_east","none"};
+    default = "safezone_east";
+    function = "tfrf_fnc_removeMarker";
 };
 
 class tfrf_param_szI {
-    title = "Safe zóna - bezpečný spawn během celé hry - default: NE";
-    values[] = {0,1,2,4};
-    texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
-    default = 0;
+    title = "Safe zóna INDEPENDENT - bezpečný spawn během celé hry";
+    values[] = {"safezone_guerrila","none"};
+    texts[] = {"Ne","Ano"};
+    default = "safezone_guerrila";
+    function = "tfrf_fnc_removeMarker";
 };
 
-class tfrf_param_szC {
-    title = "Override Wind";
-    values[] = {0,1,2,4};
-    texts[] = {"No Wind","Light Wind","Heavy Wind","Use default"};
-    default = 4;
-};
 
 /*
 class ModuleMPTypeGameMaster_F {
