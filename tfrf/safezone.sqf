@@ -40,6 +40,7 @@ _SpawnProtection setTriggerActivation ["ANY","PRESENT",true];
 _SpawnProtection setTriggerStatements ["","",""];
 _TriggerList set [ count _TriggerList, [_SpawnProtection, WEST]];
 //--- Initialization for an area ---//
+/*
 _MarkerName	 	= "safezone_east";
 _Pos			 = getMarkerPos _MarkerName;
 _SpawnProtection = createTrigger ["EmptyDetector",_Pos];
@@ -55,6 +56,7 @@ _SpawnProtection setTriggerArea [75,75,0,true];
 _SpawnProtection setTriggerActivation ["ANY","PRESENT",true];
 _SpawnProtection setTriggerStatements ["","",""];
 _TriggerList set [ count _TriggerList, [_SpawnProtection, INDEPENDENT]];
+*/
 sleep 1;
 while{true}do{
 	{

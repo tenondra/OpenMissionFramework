@@ -8,10 +8,11 @@
 // Run the loop only on the server
 if (!isServer) exitWith {};
 
-private ["_time","_minuta","_msg","_sklonovani","_msgg"];
+private ["_time","_minuta","_msg","_sklonovani","_msgg","_urslow","_slowarr"];
 _time = 0;
 _minuta = 0;
 _sklonovani = "minutu";
+_slowarr = [30,40,50,60,70,80,90,100];
 sleep 2;
 
 if (isNil "coldstart") then {
@@ -23,27 +24,31 @@ if (isNil "cantriggercold") then {
 };
 
 while {coldstart} do {
-	uisleep 1;
-	// If mission timer has been terminated by admin briefing, simply exit
-		// Připočítat jednu sekundu k počítadlu
+	uisleep 0.05;
+	// Připočítat jednu sekundu k počítadlu
 	_time = _time + 1;
+
 	//hintSilent str _time;
 
-	//add minutes if time reaches one minute
+	//Pokud uběhla minuta, připočítat ji a dát vědět všem hráčům počet minut od startu
 	if (_time ==  60) then {
-	_minuta = _minuta+1;
-	if (_minuta >1 && _minuta < 5) then {
-		_sklonovani = "minuty";
-	};
-	if (_minuta > 4) then {
-		_sklonovani = "minut";
-	};
-	_time = 0;
-	[[format ["Zbraně jsou cold již %1 %2, čeká se na start mise", _minuta, _sklonovani]], "hint", true] call BIS_fnc_MP;
+		_minuta = _minuta+1;
+		if (_minuta >1 && _minuta < 5) then {
+			_sklonovani = "minuty";
+		};
+		if (_minuta > 4) then {
+			_sklonovani = "minut";
+		};
+		if (_minuta in _slowarr) then {
+			_urslow = "Vážně vám to slotování a gearování trvá... Pohněte si!";
+			systemChat str _urslow;
+		};
+		[[format ["Zbraně jsou cold již %1 %2, čeká se na start mise", _minuta, _sklonovani]], "hint", true] call BIS_fnc_MP;
+		_time = 0;
 	};
 };
 
-//Once the mission timer has reached 0, disable the safeties
+//Jakmile Zeus sputí misi pomocí modulu, zastavit timer a dát všem vědět, že mise začala. Zároveň vypnout nesmrtelnost
 if (!coldstart && cantriggercold) then {
 		cantriggercold = false;
 		// Broadcast message to players

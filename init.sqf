@@ -2,7 +2,7 @@
 cantriggercold = true;
 
 //Initialize scripts
-[] execVM "tfrf\safezone.sqf";
+//[] execVM "tfrf\safezone.sqf";
 execVM "tfrf\coldstart\coldStart.sqf";
 execVM "tfrf\zeusFix.sqf";
 

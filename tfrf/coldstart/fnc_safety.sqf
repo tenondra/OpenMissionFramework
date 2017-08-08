@@ -6,52 +6,50 @@
 
 tfrf_fnc_safety ={
 
-		if(isDedicated) exitwith {};
+	if (isServer) exitwith {};
 
 	switch (_this select 0) do
 	{
 		//Turn safety on
-		case true:
-		{
-			// Delete bullets from fired weapons
-			if (isNil "f_eh_safetyMan") then {
-				f_eh_safetyMan = player addEventHandler["Fired", {deletevehicle (_this select 6);}];
+		case true: {
+
+			//Delete bullets from fired weapons
+			if (isNil "tfrf_eh_safetyMan") then {
+			tfrf_eh_safetyMan = player addEventHandler["Fired", {deletevehicle (_this select 6);}];
 			};
 
 			// Disable guns and damage for vehicles if player is crewing a vehicle
 			if (vehicle player != player && {player in [gunner vehicle player,driver vehicle player,commander vehicle player]}) then {
-				player setVariable ["f_var_safetyVeh",vehicle player];
-				(player getVariable "f_var_safetyVeh") allowDamage false;
+				player setVariable ["tfrf_var_safetyVeh",vehicle player];
+				(player getVariable "tfrf_var_safetyVeh") allowDamage false;
 
-				if (isNil "f_eh_safetyVeh") then {
-					f_eh_safetyVeh = (player getVariable "f_var_safetyVeh") addEventHandler["Fired", {deletevehicle (_this select 6);}];
+				if (isNil "tfrf_eh_safetyVeh") then {
+					tfrf_eh_safetyVeh = (player getVariable "tfrf_var_safetyVeh") addEventHandler["Fired", {deletevehicle (_this select 6);}];
 				};
 			};
-
-			// Make player invincible
-			player allowDamage false;
-			player AddEventHandler ["HandleDamage", {False}];
+					// Make player invincible
+					player allowDamage false;
+					false remoteExec ["allowDamage",true, false];
 		};
 
 		//Turn safety off
-		case false;
-		default {
+		case false: {
 
 			//Allow player to fire weapons
-			if !(isNil "f_eh_safetyMan") then {
-				player removeEventhandler ["Fired", f_eh_safetyMan];
-				f_eh_safetyMan = nil;
+			if !(isNil "tfrf_eh_safetyMan") then {
+				player removeEventhandler ["Fired", tfrf_eh_safetyMan];
+				tfrf_eh_safetyMan = nil;
 			};
 
 			// Re-enable guns and damage for vehicles if they were disabled
-			if !(isNull(player getVariable ["f_var_safetyVeh",objnull])) then {
-				(player getVariable "f_var_safetyVeh") allowDamage true;
+			if !(isNull(player getVariable ["tfrf_var_safetyVeh",objnull])) then {
+				(player getVariable "tfrf_var_safetyVeh") allowDamage true;
 
-				if !(isNil "f_eh_safetyVeh") then {
-					(player getVariable "f_var_safetyVeh") removeeventhandler ["Fired", f_eh_safetyVeh];
-					f_eh_safetyVeh = nil;
+				if !(isNil "tfrf_eh_safetyVeh") then {
+					(player getVariable "tfrf_var_safetyVeh") removeeventhandler ["Fired", tfrf_eh_safetyVeh];
+					tfrf_eh_safetyVeh = nil;
 				};
-				player setVariable ["f_var_safetyVeh",nil];
+				player setVariable ["tfrf_var_safetyVeh",nil];
 			};
 
 			// Make player vulnerable

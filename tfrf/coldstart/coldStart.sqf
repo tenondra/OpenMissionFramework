@@ -20,8 +20,8 @@ if (coldstart) then
 
 	// Povolit nesmrtelnost pro hráče
 	if (!isServer) then {
-		//[true] call tfrf_fnc_safety;
-		[[true],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		[true] call tfrf_fnc_safety;
+		//[[true],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 		//[] execVM "tfrf\coldstart\safety_on.sqf";
 	};
 };

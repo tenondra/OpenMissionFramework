@@ -4,7 +4,7 @@
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
 
-private ["_cameraPos","_markerpos","_group","_unit","_camera"];
+private ["_cameraPos","_markerpos","_group","_unit","_camera","_killer1","_killer2"];
 
 _cameraPos = getPos player; // get position of dead player
 _markerpos = getMarkerPos "specpos"; //locate marker
@@ -20,10 +20,7 @@ selectPlayer _unit; // switch player to the newly created 'spectator' unit
 _camera = ["GetCamera"] call BIS_fnc_EGSpectator; // get the current camera for spectator
 _cameraPos set [2,10]; // set height of camera
 _camera setPosASL _cameraPos; // move the camera back to where you died.
-cutText ["Zemřel jsi. Nyní máš možnost používat spectator mode a komunikovat s již mrtvými hráči.","PLAIN",1.5,true];
+player addMPEventHandler ["MPKilled",{_killer1 = _this select 1; _killer2 = _this select 2;cutText [format["Zemřel jsi. Zabil tě %1 / %2. Nyní máš možnost používat spectator mode a komunikovat s již mrtvými hráči.",_killer1,_killer2],"PLAIN",1.5,true];}];
 [player, true] call TFAR_fnc_forceSpectator;
-execVM "tfrf\tfarspect.sqf";
-
-player addEventHandler ["Killed",{hint format ["%1 tě zabil ; Instigator: %2", _this select 1, _this select 2]}];
+//execVM "tfrf\tfarspect.sqf";
 sleep 30;
-hintSilent "";
