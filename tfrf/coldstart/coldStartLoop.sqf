@@ -6,7 +6,7 @@
 
 
 // Run the loop only on the server
-if (!isServer) exitWith {};
+if !(isServer) exitWith {};
 
 private ["_time","_minuta","_msg","_sklonovani","_msgg","_urslow","_slowarr"];
 _time = 0;
@@ -51,13 +51,14 @@ while {coldstart} do {
 //Jakmile Zeus sputí misi pomocí modulu, zastavit timer a dát všem vědět, že mise začala. Zároveň vypnout nesmrtelnost
 if (!coldstart && cantriggercold) then {
 		cantriggercold = false;
+		publicVariable "cantriggercold";
 		// Broadcast message to players
 		[["Start",["Mise začíná právě teď!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
 		[["Zeus zahajuje misi. Mise začíná právě teď!"], "hint", true] call BIS_fnc_MP;
 		_msgg = "Zeus zahajuje misi. Mise začíná právě teď!";
 		_msgg = str _msgg;
 		for [{_i=0}, {_i<5}, {_i=_i+1}] do {
-			[_msg, "systemChat", true, true] call BIS_fnc_MP;
+			[_msgg, "systemChat", true, true] call BIS_fnc_MP;
 			sleep 1;
 		};
 

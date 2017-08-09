@@ -6,7 +6,7 @@
 
 tfrf_fnc_safety ={
 
-	//if (isDedicated) exitwith {};
+	if (isDedicated) exitwith {};
 
 	switch (_this select 0) do
 	{
@@ -29,7 +29,6 @@ tfrf_fnc_safety ={
 			};
 					// Make player invincible
 					player allowDamage false;
-					//false remoteExec ["allowDamage",true, false];
 		};
 
 		//Turn safety off

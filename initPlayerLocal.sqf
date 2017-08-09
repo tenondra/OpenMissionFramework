@@ -21,7 +21,7 @@ waitUntil {alive player};
 player enableSimulation false;
 sleep 5;
 hint parseText "<t color='#e32525'>Čekám na sync serveru...</t> ";
-sleep 10;
+sleep 23;
 hint parseText "<t color='#00ff00'>Synchronizováno!</t> ";
 sleep 2;
 player enableSimulation true;
@@ -35,7 +35,8 @@ Zobrazovaná insignie je: <img size='4.0' image= '%4' /><br /> <br />",
 
 //Dát všem vědět, že se připojil další hráč
 _msg =  format ["Hráč %1 ze Squadu %2 se právě připojil na server. Welcome!",_infohracarr2 select 1, _infohracarr1 select 1];
-[_msg] remoteExec "systemChat str";
+_msg = str _msg;
+[_msg, "systemChat", true] call BIS_fnc_MP;
 
 //Vyčistit obrazovku od hintu
 sleep 20;

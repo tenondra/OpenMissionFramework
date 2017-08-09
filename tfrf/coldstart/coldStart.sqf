@@ -20,6 +20,6 @@ if (coldstart) then
 
 	// Povolit nesmrtelnost pro hráče
 	if (!isDedicated) then {
-		[[true],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		[true] call tfrf_fnc_safety;
 	};
 };
