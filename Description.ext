@@ -22,9 +22,15 @@ class CfgNotifications {
 
 onLoadMission = "TFRF v3.4 by Brebera"; 
 OnLoadName = "TFRF v3.4 by Brebera";
+
+loadScreen = "tfrf_logo.jpg";
 OnLoadIntro = "TFRF v3.4 by Brebera"; //Neupravovat
 OnLoadMissionTime = 1; //Neupravovat
 OnloadIntroTime = 1; //Neupravovat
+
+overviewPicture = "tfrf_logo.jpg"; 
+overviewText = "TFRF v3.4 by Brebera"; //Neupravovat
+overviewTextLocked = "TFRF v3.4 by Brebera"; //Neupravovat
 
 author = "Brebera";
 
@@ -34,6 +40,7 @@ joinUnassigned = 1; //Neupravovat
 respawn = 3; //Neupravovat
 respawnDelay = 999999; //Neupravovat
 respawnButton = 0; //Neupravovat
+respawnDialog = 0;
 respawnOnStart = 0; //Neupravovat
 
 disabledAI = 1; //Neupravovat

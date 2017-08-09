@@ -15,4 +15,4 @@ enableEngineArtillery false;
 
 //custom Ares moduly
 //Modul na spuštění hry
-["TFRF", "Cold start-begin", {coldstart = false;}] call Ares_fnc_RegisterCustomModule;
+["TFRF", "Cold start-begin", {missionNamespace setVariable ["coldstart", false];}] call Ares_fnc_RegisterCustomModule;
