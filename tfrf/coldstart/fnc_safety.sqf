@@ -6,7 +6,7 @@
 
 tfrf_fnc_safety ={
 
-	if (isDedicated) exitwith {};
+	//if (isDedicated) exitwith {};
 
 	switch (_this select 0) do
 	{

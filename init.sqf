@@ -1,9 +1,6 @@
-//Zaregistrovat proměnné
-cantriggercold = true;
-
 //Spustit scripty
 //[] execVM "tfrf\safezone.sqf";
-execVM "tfrf\coldstart\coldStart.sqf";
+
 execVM "tfrf\zeusFix.sqf";
 
 [] execVM "tfrf\coldstart\fnc_safety.sqf";

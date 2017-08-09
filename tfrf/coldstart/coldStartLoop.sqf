@@ -41,7 +41,7 @@ while {coldstart} do {
 		};
 		if (_minuta in _slowarr) then {
 			_urslow = "Vážně vám to slotování a gearování trvá... Pohněte si!";
-			systemChat str _urslow;
+			[_urslow] remoteExec "systemChat str";
 		};
 		[[format ["Zbraně jsou cold již %1 %2, čeká se na start mise", _minuta, _sklonovani]], "hint", true] call BIS_fnc_MP;
 		_time = 0;
@@ -55,8 +55,9 @@ if (!coldstart && cantriggercold) then {
 		[["Start",["Mise začíná právě teď!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
 		[["Zeus zahajuje misi. Mise začíná právě teď!"], "hint", true] call BIS_fnc_MP;
 		_msgg = "Zeus zahajuje misi. Mise začíná právě teď!";
+		_msgg = str _msgg;
 		for [{_i=0}, {_i<5}, {_i=_i+1}] do {
-			systemChat str _msgg;
+			[_msg, "systemChat", true, true] call BIS_fnc_MP;
 			sleep 1;
 		};
 

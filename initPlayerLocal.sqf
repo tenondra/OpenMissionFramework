@@ -35,7 +35,7 @@ Zobrazovaná insignie je: <img size='4.0' image= '%4' /><br /> <br />",
 
 //Dát všem vědět, že se připojil další hráč
 _msg =  format ["Hráč %1 ze Squadu %2 se právě připojil na server. Welcome!",_infohracarr2 select 1, _infohracarr1 select 1];
-systemChat str _msg;
+[_msg] remoteExec "systemChat str";
 
 //Vyčistit obrazovku od hintu
 sleep 20;

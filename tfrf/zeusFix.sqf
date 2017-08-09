@@ -6,7 +6,7 @@
 
 sleep 5;
 
-if (!isServer) exitWith {};
+if (isServer) exitWith {};
 
 while {True} do {
 	uiSleep 10;
