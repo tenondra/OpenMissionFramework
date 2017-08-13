@@ -10,14 +10,14 @@ _killer1 = "";
 _killer2 = "";
 
 //Dát hráči info o tom, kdo ho zabil
-player addMPEventHandler ["MPKilled",{
+player addEventHandler ["Killed",{
   _killer1 = (_this select 1);
   _killer2 = (_this select 2);
   hint format ["Zabil tě %1 / %2", name _killer1, name _killer2];
   sleep 1;
-  player removeAllMPEventHandlers "Killed";
+  player removeAllEventHandlers "Killed";
 }];
-
+player removeweapon "ItemRadio";
 _cameraPos = getPos player; // get position of dead player
 _markerpos = getMarkerPos "specpos"; //locate marker
 _group = createGroup civilian; // create civilian group

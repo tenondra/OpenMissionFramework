@@ -1,13 +1,8 @@
-//Zaregistrovat proměnné
-cantriggercold = true;
-
 //Spustit scripty
 //[] execVM "tfrf\safezone.sqf";
 
-execVM "tfrf\zeusFix.sqf";
 execVM "tfrf\coldstart\fnc_safety.sqf";
-execVM "tfrf\coldstart\coldStart.sqf";
-
+execVM "tfrf\zeusFix.sqf";
 
 //Vypnout AI hlas, nastavit všechny hráče bez hlasu a vypnout arty comp.
 enableSaving [false, false];
@@ -20,3 +15,4 @@ enableEngineArtillery false;
 //custom Ares moduly
 //Modul na spuštění hry
 ["TFRF", "Cold start-begin", {coldstart = false; publicVariable "coldstart";}] call Ares_fnc_RegisterCustomModule;
+["TFRF", "Safety - nouzový fix", {[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;

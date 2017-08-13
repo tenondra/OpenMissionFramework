@@ -13,6 +13,7 @@ class coldstart {
     default = true;
     function = "";
     isGlobal = 1;
+    variable = "coldstart";
 };
 
 class GuerFriendly {
@@ -24,7 +25,7 @@ class GuerFriendly {
 };
 
 class tfrf_param_daytime {
-		title = "Čas - default: Poledne";
+		title = "Čas";
 		texts[] = {"Ráno","Poledne","Večer","Noc"};
 		values[] = {6,12,18,0};
 		default = 12;
@@ -32,7 +33,7 @@ class tfrf_param_daytime {
 };
 
 class tfrf_param_weather {
-		title = "Počasí - default ";
+		title = "Počasí";
 		values[] = {0,25,50,75,100};
 		texts[] = {"Slunečno","Oblačno","Zataženo","Déšť","Bouřka"};
 		default = 0;

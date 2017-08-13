@@ -34,7 +34,7 @@ Zobrazovaná insignie je: <img size='4.0' image= '%4' /><br /> <br />",
  _infohracarr2 select 1, _infohracarr1 select 1, _infohracarr1 select 5, _infohracarr1 select 4];
 
 //Dát všem vědět, že se připojil další hráč
-_msg =  format ["Hráč %1 ze Squadu %2 se právě připojil na server. Welcome!",_infohracarr2 select 1, _infohracarr1 select 1];
+_msg =  format ["Hráč %1 ze Squadu %2 se právě připojil na server. Welcome!",name player, _infohracarr1 select 1];
 _msg = str _msg;
 [_msg, "systemChat", true] call BIS_fnc_MP;
 

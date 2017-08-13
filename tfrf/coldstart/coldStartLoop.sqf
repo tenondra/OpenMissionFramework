@@ -29,7 +29,6 @@ while {coldstart} do {
 	_time = _time + 1;
 
 	//hintSilent str _time;
-
 	//Pokud uběhla minuta, připočítat ji a dát vědět všem hráčům počet minut od startu
 	if (_time ==  60) then {
 		_minuta = _minuta+1;
@@ -52,6 +51,8 @@ while {coldstart} do {
 if (!coldstart && cantriggercold) then {
 		cantriggercold = false;
 		publicVariable "cantriggercold";
+		coldstart = false;
+		publicVariable "coldstart";
 		// Broadcast message to players
 		[["Start",["Mise začíná právě teď!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
 		[["Zeus zahajuje misi. Mise začíná právě teď!"], "hint", true] call BIS_fnc_MP;
@@ -63,5 +64,6 @@ if (!coldstart && cantriggercold) then {
 		};
 
 		// Remotely execute script to disable safety for all selectable units
-		[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		//[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		[[false],"tfrf_fnc_safety",true, true] call BIS_fnc_MP;
 };
