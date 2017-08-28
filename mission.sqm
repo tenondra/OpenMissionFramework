@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=65;
+		nextID=67;
 	};
 	class Camera
 	{
 		pos[]={1784.8671,27.406559,5854.6733};
-		dir[]={0.13073266,-0.52482486,-0.84114784};
-		up[]={0.080617979,0.85114658,-0.51870191};
-		aside[]={-0.98816758,-1.0739313e-008,-0.1535808};
+		dir[]={-0.022082703,-0.78737181,-0.61613476};
+		up[]={-0.028203717,0.61639768,-0.78693068};
+		aside[]={-0.99939013,6.3518382e-007,0.035820618};
 	};
 };
 binarizationWanted=0;
@@ -522,6 +522,7 @@ class Mission
 			dataType="Layer";
 			name="Virtual Spectator";
 			id=246;
+			atlOffset=142.91;
 		};
 		class Item1
 		{
@@ -37647,7 +37648,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1777.9872,5.5,5834.1133};
-				angles[]={-0,5.7848282,0};
+				angles[]={0,5.7848282,0};
 			};
 			id=911;
 			type="ace_zeus_moduleSettings";
@@ -37939,7 +37940,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1781.5076,5.5,5841.2925};
-				angles[]={-0,1.4862132,0};
+				angles[]={0,1.4862132,0};
 			};
 			name="Zeus1";
 			isPlayable=1;
@@ -39723,8 +39724,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1777.2572,5.5,5832.0547};
-				angles[]={-0,5.7848253,0};
+				position[]={1777.257,5.5,5832.0552};
+				angles[]={0,5.7848244,0};
 			};
 			name="GM1C";
 			id=958;
@@ -39994,8 +39995,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1780.1357,5.5,5841.7119};
-				angles[]={-0,1.3410199,0};
+				position[]={1780.136,5.5,5841.7119};
+				angles[]={0,1.3410237,0};
 			};
 			id=1074;
 			type="ModuleCurator_F";
@@ -40214,8 +40215,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1779.605,5.5,5839.7837};
-				angles[]={-0,1.3410199,0};
+				position[]={1779.605,5.5,5839.7842};
+				angles[]={0,1.3410237,0};
 			};
 			id=1079;
 			type="ModuleCurator_F";
@@ -40325,7 +40326,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1781.0013,5.5,5839.3574};
-				angles[]={-0,1.4862022,0};
+				angles[]={0,1.4862022,0};
 			};
 			name="Zeus2";
 			isPlayable=1;
@@ -40339,7 +40340,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1780.4951,5.5,5837.4229};
-				angles[]={-0,1.4861956,0};
+				angles[]={0,1.4861956,0};
 			};
 			name="Zeus3";
 			isPlayable=1;
@@ -40352,8 +40353,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={1779.0742,5.5,5837.8555};
-				angles[]={-0,1.3410199,0};
+				position[]={1779.074,5.5,5837.855};
+				angles[]={0,1.3410237,0};
 			};
 			id=1083;
 			type="ModuleCurator_F";
@@ -40463,7 +40464,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1779.5686,5.5,5833.7759};
-				angles[]={-0,0.7468645,0};
+				angles[]={0,0.7468645,0};
 			};
 			name="HeadlessOne";
 			isPlayable=1;

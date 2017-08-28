@@ -2,7 +2,6 @@
 //[] execVM "tfrf\safezone.sqf";
 
 execVM "tfrf\coldstart\fnc_safety.sqf";
-execVM "tfrf\zeusFix.sqf";
 
 //Vypnout AI hlas, nastavit všechny hráče bez hlasu a vypnout arty comp.
 enableSaving [false, false];
