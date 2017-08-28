@@ -1,5 +1,5 @@
 //=====================================================================================
-// TFRF Respawn script + init
+// TFRF Spectator script + init
 // Credits: Brebera
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================

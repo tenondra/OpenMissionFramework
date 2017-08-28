@@ -20,17 +20,17 @@ class CfgNotifications {
 	};
 };
 
-onLoadMission = "TFRF v3.4 by Brebera"; 
-OnLoadName = "TFRF v3.4 by Brebera";
+onLoadMission = "TFRF v3.4.2 by Brebera"; 
+OnLoadName = "TFRF v3.4.2 by Brebera";
 
 loadScreen = "tfrf_logo.jpg";
-OnLoadIntro = "TFRF v3.4 by Brebera"; //Neupravovat
+OnLoadIntro = "TFRF v3.4.2 by Brebera"; //Neupravovat
 OnLoadMissionTime = 1; //Neupravovat
 OnloadIntroTime = 1; //Neupravovat
 
 overviewPicture = "tfrf_logo.jpg"; 
-overviewText = "TFRF v3.4 by Brebera"; //Neupravovat
-overviewTextLocked = "TFRF v3.4 by Brebera"; //Neupravovat
+overviewText = "TFRF v3.4.2 by Brebera"; //Neupravovat
+overviewTextLocked = "TFRF v3.4.2 by Brebera"; //Neupravovat
 
 author = "Brebera";
 

@@ -34,6 +34,9 @@ tfrf_fnc_safety ={
 		//Turn safety off
 		case false: {
 
+			_zeusarr = [Zeus1,Zeus2,Zeus3,Zeus1C];
+			if (player in _zeusarr) exitWith {};
+
 			//Allow player to fire weapons
 			if !(isNil "tfrf_eh_safetyMan") then {
 				player removeEventhandler ["Fired", tfrf_eh_safetyMan];
