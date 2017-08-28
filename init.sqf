@@ -15,3 +15,8 @@ enableEngineArtillery false;
 //Modul na spuštění hry
 ["TFRF", "Cold start-begin", {coldstart = false; publicVariable "coldstart";}] call Ares_fnc_RegisterCustomModule;
 ["TFRF", "Safety - nouzový fix", {[[false],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;
+
+//CBA funkce
+["hint", {
+    [[(_this select 0)], "hint", true] call BIS_fnc_MP;
+}, "admin"] call CBA_fnc_registerChatCommand;
