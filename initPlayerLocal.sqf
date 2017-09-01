@@ -34,7 +34,7 @@ player enableSimulation true;
 
 //Ujistit hráče, že vše funguje
 hint parseText format ["<t align='center' size='2.0'>TFROD SRS MISE</t><br />
-Hráč: %1; TFROD Framework v3.4.2 inicializován. Vítej!<br /> <br />
+Hráč: %1; TFROD Framework v3.4.2c inicializován. Vítej!<br /> <br />
 Tvůj squad je: %2   SquadTitle je: %3<br /> <br />
 Zobrazovaná insignie je: <img size='4.0' image= '%4' /><br /> <br />",
  _infohracarr2 select 1, _infohracarr1 select 1, _infohracarr1 select 5, _infohracarr1 select 4];

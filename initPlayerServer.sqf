@@ -5,6 +5,7 @@
 			unassignCurator _x;
 			sleep 1;
 			_unit assignCurator _x;
+			_unit allowDamage false;
 			if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
 				_unit call TFAR_fnc_isForcedCurator;
 			};

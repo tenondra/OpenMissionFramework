@@ -8,6 +8,8 @@ tfrf_fnc_safety ={
 
 	if (isDedicated) exitwith {};
 
+	_zeusarr = [Zeus1,Zeus2,Zeus3,Zeus1C];
+	
 	switch (_this select 0) do
 	{
 		//Turn safety on
@@ -34,8 +36,9 @@ tfrf_fnc_safety ={
 		//Turn safety off
 		case false: {
 
-			_zeusarr = [Zeus1,Zeus2,Zeus3,Zeus1C];
-			if (player in _zeusarr) exitWith {};
+			if (player in _zeusarr) exitWith {
+				player allowDamage false;
+			};
 
 			//Allow player to fire weapons
 			if !(isNil "tfrf_eh_safetyMan") then {
@@ -56,6 +59,9 @@ tfrf_fnc_safety ={
 
 			// Make player vulnerable
 			player allowDamage true;
+			if (player in _zeusarr) exitWith {
+				player allowDamage false;
+			};
 		};
 	};
 };
