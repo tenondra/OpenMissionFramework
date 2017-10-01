@@ -1,10 +1,10 @@
 //=====================================================================================
-// TFRF Cold Start - safety script
+// MF Cold Start - safety script
 // Credits: F3 Framework, Brebera
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
 
-tfrf_fnc_safety ={
+mf_fnc_safety ={
 
 	if (isDedicated) exitwith {};
 
@@ -16,17 +16,17 @@ tfrf_fnc_safety ={
 		case true: {
 
 			//Delete bullets from fired weapons
-			if (isNil "tfrf_eh_safetyMan") then {
-			tfrf_eh_safetyMan = player addEventHandler["Fired", {deletevehicle (_this select 6);}];
+			if (isNil "mf_eh_safetyMan") then {
+			mf_eh_safetyMan = player addEventHandler["Fired", {deletevehicle (_this select 6);}];
 			};
 
 			// Disable guns and damage for vehicles if player is crewing a vehicle
 			if (vehicle player != player && {player in [gunner vehicle player,driver vehicle player,commander vehicle player]}) then {
-				player setVariable ["tfrf_var_safetyVeh",vehicle player];
-				(player getVariable "tfrf_var_safetyVeh") allowDamage false;
+				player setVariable ["mf_var_safetyVeh",vehicle player];
+				(player getVariable "mf_var_safetyVeh") allowDamage false;
 
-				if (isNil "tfrf_eh_safetyVeh") then {
-					tfrf_eh_safetyVeh = (player getVariable "tfrf_var_safetyVeh") addEventHandler["Fired", {deletevehicle (_this select 6);}];
+				if (isNil "mf_eh_safetyVeh") then {
+					mf_eh_safetyVeh = (player getVariable "mf_var_safetyVeh") addEventHandler["Fired", {deletevehicle (_this select 6);}];
 				};
 			};
 					// Make player invincible
@@ -41,20 +41,20 @@ tfrf_fnc_safety ={
 			};
 
 			//Allow player to fire weapons
-			if !(isNil "tfrf_eh_safetyMan") then {
-				player removeEventhandler ["Fired", tfrf_eh_safetyMan];
-				tfrf_eh_safetyMan = nil;
+			if !(isNil "mf_eh_safetyMan") then {
+				player removeEventhandler ["Fired", mf_eh_safetyMan];
+				mf_eh_safetyMan = nil;
 			};
 
 			// Re-enable guns and damage for vehicles if they were disabled
-			if !(isNull(player getVariable ["tfrf_var_safetyVeh",objnull])) then {
-				(player getVariable "tfrf_var_safetyVeh") allowDamage true;
+			if !(isNull(player getVariable ["mf_var_safetyVeh",objnull])) then {
+				(player getVariable "mf_var_safetyVeh") allowDamage true;
 
-				if !(isNil "tfrf_eh_safetyVeh") then {
-					(player getVariable "tfrf_var_safetyVeh") removeeventhandler ["Fired", tfrf_eh_safetyVeh];
-					tfrf_eh_safetyVeh = nil;
+				if !(isNil "mf_eh_safetyVeh") then {
+					(player getVariable "mf_var_safetyVeh") removeeventhandler ["Fired", mf_eh_safetyVeh];
+					mf_eh_safetyVeh = nil;
 				};
-				player setVariable ["tfrf_var_safetyVeh",nil];
+				player setVariable ["mf_var_safetyVeh",nil];
 			};
 
 			// Make player vulnerable

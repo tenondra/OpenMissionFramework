@@ -1,5 +1,5 @@
 //=====================================================================================
-// TFRF Cold Start - Init
+// MF Cold Start - Init
 // Credits: Brebera
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
@@ -14,12 +14,12 @@ if (coldstart) then
 {
 	// Server se postará o loop a notifikace
 	if (isServer) then {
-		[] execVM "tfrf\coldstart\coldStartLoop.sqf";
+		[] execVM "scripts\coldstart\coldStartLoop.sqf";
 	};
   "COLD START" remoteExec ["hint"];
 
 	// Povolit nesmrtelnost pro hráče
 	if (!isDedicated) then {
-		[[true],"tfrf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		[[true],"mf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 	};
 };

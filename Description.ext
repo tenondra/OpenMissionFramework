@@ -20,19 +20,19 @@ class CfgNotifications {
 	};
 };
 
-onLoadMission = "TFRF v3.4.2c by Brebera"; 
-OnLoadName = "TFRF v3.4.2c by Brebera";
+onLoadMission = "MF v0.0.1 by Brebera, Arcanum"; 
+OnLoadName = "MF v0.0.1 by Brebera, Arcanum";
 
-loadScreen = "tfrf_logo.jpg";
-OnLoadIntro = "TFRF v3.4.2c by Brebera"; //Neupravovat
+loadScreen = "mf_logo.jpg";
+OnLoadIntro = "MF v0.0.1 by Brebera, Arcanum"; //Neupravovat
 OnLoadMissionTime = 1; //Neupravovat
 OnloadIntroTime = 1; //Neupravovat
 
-overviewPicture = "tfrf_logo.jpg"; 
-overviewText = "TFRF v3.4.2c by Brebera"; //Neupravovat
-overviewTextLocked = "TFRF v3.4.2c by Brebera"; //Neupravovat
+overviewPicture = "mf_logo.jpg"; 
+overviewText = "MF v0.0.1 by Brebera, Arcanum"; //Neupravovat
+overviewTextLocked = "MF v0.0.1 by Brebera, Arcanum"; //Neupravovat
 
-author = "Brebera";
+author = "Brebera, Arcanum";
 
 scriptedPlayer = 1; //Neupravovat
 joinUnassigned = 1; //Neupravovat

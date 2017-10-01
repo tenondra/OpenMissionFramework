@@ -321,7 +321,7 @@ class AddonsMetaData
 randomSeed=8646515;
 class ScenarioData
 {
-	author="Brebera";
+	author="Brebera, Arcanum";
 	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
