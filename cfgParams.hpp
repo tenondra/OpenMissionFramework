@@ -54,7 +54,7 @@ class omf_param_szE {
     values[] = {0,1};
     texts[] = {"safezone_east","none"};
     default = "safezone_east";
-    function = "mf_fnc_removeMarker";
+    function = "omf_fnc_removeMarker";
 };
 
 class omf_param_szI {

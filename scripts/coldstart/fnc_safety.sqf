@@ -26,7 +26,7 @@ omf_fnc_safety ={
 				(player getVariable "omf_var_safetyVeh") allowDamage false;
 
 				if (isNil "omf_eh_safetyVeh") then {
-					mf_eh_safetyVeh = (player getVariable "omf_var_safetyVeh") addEventHandler["Fired", {deletevehicle (_this select 6);}];
+					omf_eh_safetyVeh = (player getVariable "omf_var_safetyVeh") addEventHandler["Fired", {deletevehicle (_this select 6);}];
 				};
 			};
 					// Make player invincible
@@ -47,8 +47,8 @@ omf_fnc_safety ={
 			};
 
 			// Re-enable guns and damage for vehicles if they were disabled
-			if !(isNull(player getVariable ["mf_var_safetyVeh",objnull])) then {
-				(player getVariable "mf_var_safetyVeh") allowDamage true;
+			if !(isNull(player getVariable ["omf_var_safetyVeh",objnull])) then {
+				(player getVariable "omf_var_safetyVeh") allowDamage true;
 
 				if !(isNil "omf_eh_safetyVeh") then {
 					(player getVariable "omf_var_safetyVeh") removeeventhandler ["Fired", omf_eh_safetyVeh];
