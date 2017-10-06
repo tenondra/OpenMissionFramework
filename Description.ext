@@ -5,7 +5,6 @@ class Header {
 	maxPlayers = 128; 
 	playerCountMultipleOf = 1;
 };
-//Kde je neupravovat, tak to vážně neupravujte...
 	
 class Params {
 	#include "cfgParams.hpp"
@@ -13,35 +12,35 @@ class Params {
 
 class CfgNotifications {
 	class Start {
-		title = "Zeus zahajuje misi";
+		title = "Zeus is starting the mission!";
 		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIconDone_ca.paa";
 		description = "%1";
 		priority = 10;
 	};
 };
 
-onLoadMission = "OMF v0.0.1 by Brebera, Arcanum"; 
-OnLoadName = "OMF v0.0.1 by Brebera, Arcanum";
+onLoadMission = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
+OnLoadName = "OpenMissionFramework v3.4.2c by Brebera, Arcanum";
 
 loadScreen = "omf_logo.jpg";
-OnLoadIntro = "OMF v0.0.1 by Brebera, Arcanum"; //Neupravovat
-OnLoadMissionTime = 1; //Neupravovat
-OnloadIntroTime = 1; //Neupravovat
+OnLoadIntro = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
+OnLoadMissionTime = 1; 
+OnloadIntroTime = 1; 
 
 overviewPicture = "omf_logo.jpg"; 
-overviewText = "OMF v0.0.1 by Brebera, Arcanum"; //Neupravovat
-overviewTextLocked = "OMF v0.0.1 by Brebera, Arcanum"; //Neupravovat
+overviewText = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
+overviewTextLocked = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
 
 author = "Brebera, Arcanum";
 
-scriptedPlayer = 1; //Neupravovat
-joinUnassigned = 1; //Neupravovat
+scriptedPlayer = 1; 
+joinUnassigned = 1; 
 
-respawn = 3; //Neupravovat
-respawnDelay = 999999; //Neupravovat
-respawnButton = 0; //Neupravovat
+respawn = 3; 
+respawnDelay = 999999; 
+respawnButton = 0; 
 respawnDialog = 0;
-respawnOnStart = 0; //Neupravovat
+respawnOnStart = 0;
 
-disabledAI = 1; //Neupravovat
-enableDebugConsole = 1; //Neupravovat
+disabledAI = 1;
+enableDebugConsole = 1;
