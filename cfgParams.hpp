@@ -24,7 +24,7 @@ class GuerFriendly {
 	function = "BIS_fnc_paramGuerFriendly";
 };
 
-class mf_param_daytime {
+class omf_param_daytime {
 		title = "Čas";
 		texts[] = {"Ráno","Poledne","Večer","Noc"};
 		values[] = {6,12,18,0};
@@ -32,7 +32,7 @@ class mf_param_daytime {
 		function = "BIS_fnc_paramDaytime"; 
 };
 
-class mf_param_weather {
+class omf_param_weather {
 		title = "Počasí";
 		values[] = {0,25,50,75,100};
 		texts[] = {"Slunečno","Oblačno","Zataženo","Déšť","Bouřka"};
@@ -41,15 +41,15 @@ class mf_param_weather {
 };
 
 /*
-class mf_param_szW {
+class omf_param_szW {
     title = "Safe zóna BLUFOR - bezpečný spawn během celé hry";
     values[] = {"safezone_west","none"};
     texts[] = {"Ne","Ano"};
     default = "safezone_west";
-    function = "mf_fnc_removeMarker";
+    function = "omf_fnc_removeMarker";
 };
 
-class mf_param_szE {
+class omf_param_szE {
     title = "Safe zóna OPFOR - bezpečný spawn během celé hry";
     values[] = {0,1};
     texts[] = {"safezone_east","none"};
@@ -57,12 +57,12 @@ class mf_param_szE {
     function = "mf_fnc_removeMarker";
 };
 
-class mf_param_szI {
+class omf_param_szI {
     title = "Safe zóna INDEPENDENT - bezpečný spawn během celé hry";
     values[] = {"safezone_guerrila","none"};
     texts[] = {"Ne","Ano"};
     default = "safezone_guerrila";
-    function = "mf_fnc_removeMarker";
+    function = "omf_fnc_removeMarker";
 };
 
 class ModuleMPTypeGameMaster_F {

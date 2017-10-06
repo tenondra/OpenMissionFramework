@@ -1,5 +1,5 @@
 //=====================================================================================
-// MF Spawn script + init
+// OMF Spawn script + init
 // Credits: Brebera, Arcanum
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================

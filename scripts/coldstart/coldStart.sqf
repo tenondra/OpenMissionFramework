@@ -1,5 +1,5 @@
 //=====================================================================================
-// MF Cold Start - Init
+// OMF Cold Start - Init
 // Credits: Brebera
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
@@ -20,6 +20,6 @@ if (coldstart) then
 
 	// Povolit nesmrtelnost pro hráče
 	if (!isDedicated) then {
-		[[true],"mf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		[[true],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 	};
 };

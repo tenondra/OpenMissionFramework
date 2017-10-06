@@ -1,5 +1,5 @@
 //=====================================================================================
-// MF Cold Start - Loop
+// OMF Cold Start - Loop
 // Credits: Brebera, Arcanum
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
@@ -64,6 +64,6 @@ if (!coldstart && cantriggercold) then {
 		};
 
 		// Remotely execute script to disable safety for all selectable units
-		//[[false],"mf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
-		[[false],"mf_fnc_safety",true, true] call BIS_fnc_MP;
+		//[[false],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+		[[false],"omf_fnc_safety",true, true] call BIS_fnc_MP;
 };

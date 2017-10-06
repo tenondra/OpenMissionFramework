@@ -9,5 +9,5 @@ execVM "scripts\coldstart\coldStart.sqf";
 
 while {coldstart} do {
   sleep 5;
-  [[true],"mf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
+  [[true],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;
 };

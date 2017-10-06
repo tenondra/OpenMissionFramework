@@ -20,17 +20,17 @@ class CfgNotifications {
 	};
 };
 
-onLoadMission = "MF v0.0.1 by Brebera, Arcanum"; 
-OnLoadName = "MF v0.0.1 by Brebera, Arcanum";
+onLoadMission = "OMF v0.0.1 by Brebera, Arcanum"; 
+OnLoadName = "OMF v0.0.1 by Brebera, Arcanum";
 
-loadScreen = "mf_logo.jpg";
-OnLoadIntro = "MF v0.0.1 by Brebera, Arcanum"; //Neupravovat
+loadScreen = "omf_logo.jpg";
+OnLoadIntro = "OMF v0.0.1 by Brebera, Arcanum"; //Neupravovat
 OnLoadMissionTime = 1; //Neupravovat
 OnloadIntroTime = 1; //Neupravovat
 
-overviewPicture = "mf_logo.jpg"; 
-overviewText = "MF v0.0.1 by Brebera, Arcanum"; //Neupravovat
-overviewTextLocked = "MF v0.0.1 by Brebera, Arcanum"; //Neupravovat
+overviewPicture = "omf_logo.jpg"; 
+overviewText = "OMF v0.0.1 by Brebera, Arcanum"; //Neupravovat
+overviewTextLocked = "OMF v0.0.1 by Brebera, Arcanum"; //Neupravovat
 
 author = "Brebera, Arcanum";
 
