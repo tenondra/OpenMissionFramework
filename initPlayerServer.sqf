@@ -1,3 +1,4 @@
+//Fix TFAR v1.0 zeus
 {
 	if (!isnull (getassignedcuratorunit _x)) then {
 		_unit = getassignedcuratorunit _x;

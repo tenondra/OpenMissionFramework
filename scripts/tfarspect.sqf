@@ -1,5 +1,5 @@
 //=====================================================================================
-// TFRF Kompatibilita TFAR a spectatoru
+// OMF Kompatibilita TFAR a spectatoru
 // Credits: Brebera
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================

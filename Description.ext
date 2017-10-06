@@ -19,19 +19,19 @@ class CfgNotifications {
 	};
 };
 
-onLoadMission = "OpenMissionFramework v3.4.2c by Brebera"; 
-OnLoadName = "OpenMissionFramework v3.4.2c by Brebera";
+onLoadMission = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
+OnLoadName = "OpenMissionFramework v3.4.2c by Brebera, Arcanum";
 
 loadScreen = "omf_logo.jpg";
-OnLoadIntro = "OpenMissionFramework v3.4.2c by Brebera"; 
+OnLoadIntro = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
 OnLoadMissionTime = 1; 
 OnloadIntroTime = 1; 
 
 overviewPicture = "omf_logo.jpg"; 
-overviewText = "OpenMissionFramework v3.4.2c by Brebera"; 
-overviewTextLocked = "OpenMissionFramework v3.4.2c by Brebera"; 
+overviewText = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
+overviewTextLocked = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
 
-author = "Brebera";
+author = "Brebera, Arcanum";
 
 scriptedPlayer = 1; 
 joinUnassigned = 1; 

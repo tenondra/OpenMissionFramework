@@ -1,5 +1,5 @@
 //=====================================================================================
-// TFRF Spectator script + init
+// OMF Spectator script + init
 // Credits: Brebera
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
