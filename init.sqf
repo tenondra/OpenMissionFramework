@@ -14,7 +14,7 @@ enableRadio false;
 //custom Ares moduly
 //Modul na spuštění hry
 ["OMF", "Cold start-begin", {coldstart = false; publicVariable "coldstart";}] call Ares_fnc_RegisterCustomModule;
-["OMF", "Safety - nouzový fix", {[[false],"mf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;
+["OMF", "Safety - nouzový fix", {[[false],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;
 
 //CBA funkce
 ["hint", {
