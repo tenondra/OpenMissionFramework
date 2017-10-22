@@ -9,7 +9,7 @@ class ModuleMPTypeGameMaster_F {
 class coldstart {
     title = "Cold Start - hráči se nebudou do odstartování mise schopni zranit ani střílet, nebo poškodit a střílet z vozidel";
     values[] = {true,false};
-    texts[] =  {"Ano", "Ne"};
+    texts[] =  {"Yes", "Nope"};
     default = true;
     function = "";
     isGlobal = 1;
@@ -17,27 +17,36 @@ class coldstart {
 };
 
 class GuerFriendly {
-	title = "Nezávislí - přátelé s";
+	title = "Guerila - friendlies w/";
 	values[] = {-1,1,0,2};
-	texts[] = {"Nikým","BLUFOR","OPFOR","Všemi"};
+	texts[] = {"No one","BLUFOR","OPFOR","Everyone"};
 	default = -1;
 	function = "BIS_fnc_paramGuerFriendly";
 };
 
 class omf_param_daytime {
-		title = "Čas";
-		texts[] = {"Ráno","Poledne","Večer","Noc"};
+		title = "DayTime";
+		texts[] = {"Morning","Noon","Evening","Night"};
 		values[] = {6,12,18,0};
 		default = 12;
-		function = "BIS_fnc_paramDaytime"; 
+		function = "BIS_fnc_paramDaytime";
 };
 
 class omf_param_weather {
-		title = "Počasí";
+		title = "Weather";
 		values[] = {0,25,50,75,100};
 		texts[] = {"Slunečno","Oblačno","Zataženo","Déšť","Bouřka"};
 		default = 0;
-        function = "BIS_fnc_paramWeather"; 
+    function = "BIS_fnc_paramWeather";
+};
+
+class omf_welcomemsg {
+  title = "Welcome Message";
+  values[] = {0,1};
+  texts[] = {"Yes","No"};
+  default = 1;
+  isGlobal = 1;
+  function = "omf_setwelcomemsg";
 };
 
 /*

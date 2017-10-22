@@ -8,9 +8,9 @@
 // Run the loop only on the server
 if !(isServer) exitWith {};
 
-private ["_time","_minuta","_msg","_sklonovani","_msgg","_urslow","_slowarr"];
+private ["_time","_minute","_msg","_sklonovani","_msgg","_urslow","_slowarr"];
 _time = 0;
-_minuta = 0;
+_minute = 0;
 _sklonovani = "minutu";
 _slowarr = [30,40,50,60,70,80,90,100];
 sleep 2;
@@ -31,18 +31,18 @@ while {coldstart} do {
 	//hintSilent str _time;
 	//Pokud uběhla minuta, připočítat ji a dát vědět všem hráčům počet minut od startu
 	if (_time ==  60) then {
-		_minuta = _minuta+1;
-		if (_minuta >1 && _minuta < 5) then {
-			_sklonovani = "minuty";
+		_minute = _minute+1;
+		if (_minute >1 && _minute < 5) then {
+			_sklonovani = "minute";
 		};
-		if (_minuta > 4) then {
-			_sklonovani = "minut";
+		if (_minute > 4) then {
+			_sklonovani = "minutes";
 		};
-		if (_minuta in _slowarr) then {
-			_urslow = "Vážně vám to slotování a gearování trvá... Pohněte si!";
+		if (_minute in _slowarr) then {
+			_urslow = "Hurry up guys! Its not a barbie simulator";
 			[_urslow] remoteExec "systemChat str";
 		};
-		[[format ["Zbraně jsou cold již %1 %2, čeká se na start mise", _minuta, _sklonovani]], "hint", true] call BIS_fnc_MP;
+		[[format ["Weapons are cold already %1 %2, waiting for the missionmaker to start the mission", _minute, _sklonovani]], "hint", true] call BIS_fnc_MP;
 		_time = 0;
 	};
 };
@@ -54,9 +54,9 @@ if (!coldstart && cantriggercold) then {
 		coldstart = false;
 		publicVariable "coldstart";
 		// Broadcast message to players
-		[["Start",["Mise začíná právě teď!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
-		[["Zeus zahajuje misi. Mise začíná právě teď!"], "hint", true] call BIS_fnc_MP;
-		_msgg = "Zeus zahajuje misi. Mise začíná právě teď!";
+		[["Start",["The mission begins!"]],"bis_fnc_showNotification",true] call BIS_fnc_MP;
+		[["Zeus has started the mission. The mission begins!"], "hint", true] call BIS_fnc_MP;
+		_msgg = "Zeus has started the mission. The mission begins!";
 		_msgg = str _msgg;
 		for [{_i=0}, {_i<5}, {_i=_i+1}] do {
 			[_msgg, "systemChat", true, true] call BIS_fnc_MP;
