@@ -7,19 +7,27 @@ execVM "scripts\coldstart\fnc_safety.sqf";
 enableSaving [false, false];
 enableSentences false;
 enableRadio false;
-//enableEngineArtillery false;
+
 {_x disableConversation true} forEach playableUnits;
 {_x setSpeaker "ace_novoice"} forEach playableUnits;
 
+if (omg_earty == true) then {
+  enableEngineArtillery false;
+};
+
 //custom Ares moduly
 //Modul na spuštění hry
-["OMF", "Cold start-begin", {coldstart = false; publicVariable "coldstart";}] call Ares_fnc_RegisterCustomModule;
-["OMF", "Safety - emergency fix", {[[false],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;
+if isClass (configFile >> "CfgPatches" >> "ares_achilles" )) then {
+  ["OMF", "Begin mission", {coldstart = false; publicVariable "coldstart";}] call Ares_fnc_RegisterCustomModule;
+  ["OMF", "Safety - nouzový fix", {[[false],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;
+};
 
 
 //CBA functions
 
 //Easier way for admin to hint players
-["hint", {
-    [[(_this select 0)], "hint", true] call BIS_fnc_MP;
-}, "admin"] call CBA_fnc_registerChatCommand;
+if isClass (configFile >> "CfgPatches" >> "cba" )) then {
+  ["hint", {
+      [[(_this select 0)], "hint", true] call BIS_fnc_MP;
+  }, "admin"] call CBA_fnc_registerChatCommand;
+};

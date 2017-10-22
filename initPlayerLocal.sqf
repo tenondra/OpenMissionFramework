@@ -27,6 +27,7 @@ if (omf_welcomemsg == true) then {
 waitUntil {alive player};
 player enableSimulation false;
 player allowdamage false;
+player openMap [true, true];
 sleep 2;
 hint parseText "<t color='#e32525'>Čekám na sync serveru...</t> ";
 sleep 10;
@@ -34,6 +35,7 @@ hint parseText "<t color='#00ff00'>Synchronizováno!</t> ";
 sleep 2;
 player enableSimulation true;
 player allowdamage true;
+player openMap [false, false];
 
 //Ujistit hráče, že vše funguje
 if (omf_welcomemsg == true) then {

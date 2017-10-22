@@ -1,6 +1,6 @@
 //=====================================================================================
 // OMF Cold Start - Loop
-// Credits: Brebera, Arcanum
+// Credits: Brebera, Arcanum, F3 Framework
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
 
@@ -39,7 +39,7 @@ while {coldstart} do {
 			_sklonovani = "minutes";
 		};
 		if (_minute in _slowarr) then {
-			_urslow = "Hurry up guys! Its not a barbie simulator";
+			_urslow = "Hurry up guys! Its not a barbie dress-up simulator";
 			[_urslow] remoteExec "systemChat str";
 		};
 		[[format ["Weapons are cold already %1 %2, waiting for the missionmaker to start the mission", _minute, _sklonovani]], "hint", true] call BIS_fnc_MP;

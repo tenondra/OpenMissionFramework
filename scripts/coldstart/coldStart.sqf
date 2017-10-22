@@ -1,6 +1,6 @@
 //=====================================================================================
 // OMF Cold Start - Init
-// Credits: Brebera
+// Credits: Brebera, F3 Framework
 // Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
 //=====================================================================================
 
