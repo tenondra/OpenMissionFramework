@@ -32,7 +32,6 @@ addons[]=
 	"A3_Characters_F",
 	"ace_explosives",
 	"ace_nouniformrestrictions",
-	"FIR_PilotCrewPack_US",
 	"ace_gforces",
 	"ace_parachute",
 	"ascz_arsenal_box",
@@ -92,11 +91,11 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item3
+		/*class Item3
 		{
 			className="FIR_PilotCrewPack_US";
 			name="FIR_PilotCrewPack_US";
-		};
+		};*/
 		class Item4
 		{
 			className="ace_parachute";
@@ -321,7 +320,7 @@ class AddonsMetaData
 randomSeed=8646515;
 class ScenarioData
 {
-	author="Brebera, Arcanum";
+	author="Brebera";
 	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes

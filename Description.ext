@@ -19,25 +19,64 @@ class CfgNotifications {
 	};
 };
 
-onLoadMission = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
-OnLoadName = "OpenMissionFramework v3.4.2c by Brebera, Arcanum";
+
+class CfgVehicles {
+
+	class Scrapyard_base_F;
+    class Land_PaperBox_open_full_F: Scrapyard_base_F
+    {
+        maximumLoad = 2000;
+        transportMaxWeapons = 12;
+        transportMaxMagazines = 64;
+        transportMaxBackpacks = 12;
+		supplyRadius = 1.4;
+        class TransportMagazines {};
+        class TransportWeapons {};
+        class TransportItems {};
+    };
+
+    class ascz_arsenal_box: Land_PaperBox_open_full_F
+    {
+            displayName = "[OMF] Arsenal";
+            vehicleClass = "Ammo";
+            class eventHandlers
+            {
+                init = "_this select 0 addAction [""<img image='\A3\Ui_f\data\Logos\arsenal_1024_ca.paa' size='1.8' shadow=0.1 />"", { [""Open"", true] call BIS_fnc_arsenal; }, """", 6];";
+            };
+    };
+};
+
+
+class CfgRespawnTemplates {
+	class omf_respawnTemp {		
+		onPlayerKilled = "\scripts\omf_spectator.sqf";		
+		onPlayerRespawn = "\scripts\omf_respawn.sqf";
+
+		respawn = 2;
+		respawnDelay = 10;
+		respawnOnStart = 1;
+	};
+};
+
+onLoadMission = "OpenMissionFramework 1.0 by Brebera, Arcanum"; 
+OnLoadName = "OpenMissionFramework 1.0 by Brebera, Arcanum";
 
 loadScreen = "omf_logo.jpg";
-OnLoadIntro = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
+OnLoadIntro = "OpenMissionFramework 1.0 by Brebera, Arcanum"; 
 OnLoadMissionTime = 1; 
 OnloadIntroTime = 1; 
 
 overviewPicture = "omf_logo.jpg"; 
-overviewText = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
-overviewTextLocked = "OpenMissionFramework v3.4.2c by Brebera, Arcanum"; 
+overviewText = "OpenMissionFramework 1.0 by Brebera, Arcanum"; 
+overviewTextLocked = "OpenMissionFramework 1.0 by Brebera, Arcanum"; 
 
 author = "Brebera, Arcanum";
 
 scriptedPlayer = 1; 
 joinUnassigned = 1; 
 
-respawn = 3; 
-respawnDelay = 999999; 
+respawnTemplates[] = {"omf_respawnTemp"};
+
 respawnButton = 0; 
 respawnDialog = 0;
 respawnOnStart = 0;

@@ -7,17 +7,16 @@
 //Inicializovat dynamics group aka "U"
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
-//První spawn hráče
 private ["_infohrac","_infohracarr1","_infohracarr2","_msg","_zeusarr"];
 _zeusarr = [Zeus1,Zeus2,Zeus3,Zeus1C];
-//Získat info o hráči
+//Get info about player
 _infohrac = squadParams player;
 _infohracarr1 = _infohrac select 0;
 _infohracarr2 = _infohrac select 1;
 
 if (omf_welcomemsg == true) then {
   if (player in _zeusarr) exitWith {
-    _msg =  format ["Zeus %1 ze Squadu %2 se právě připojil na server. Welcome!",name player, _infohracarr1 select 1];
+    _msg =  format ["Zeus %1 from squad %2 had just connected. Welcome!",name player, _infohracarr1 select 1];
     _msg = str _msg;
     [_msg, "systemChat", true] call BIS_fnc_MP;
   };
