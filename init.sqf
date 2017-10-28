@@ -1,5 +1,6 @@
 //Init basic scripts
-//[] execVM "scripts\safezone.sqf";
+
+omf_welcomemsg = true;
 
 execVM "scripts\coldstart\fnc_safety.sqf";
 
@@ -11,23 +12,21 @@ enableRadio false;
 {_x disableConversation true} forEach playableUnits;
 {_x setSpeaker "ace_novoice"} forEach playableUnits;
 
-if (omf_earty == true) then {
+//if (omf_earty == true) then {
   enableEngineArtillery false;
-};
-
-//custom Ares moduly
-//Modul na spuštění hry
-if isClass (configFile >> "CfgPatches" >> "ares_achilles" )) then {
-  ["OMF", "Begin mission", {coldstart = false; publicVariable "coldstart";}] call Ares_fnc_RegisterCustomModule;
-  ["OMF", "Safety - nouzový fix", {[[false],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;
-};
-
+//};
 
 //CBA functions
-
 //Easier way for admin to hint players
-if isClass (configFile >> "CfgPatches" >> "cba_main_a3" )) then {
+if (isClass (configfile >> "CfgPatches" >> "cba_main")) then {
   ["hint", {
       [[(_this select 0)], "hint", true] call BIS_fnc_MP;
   }, "admin"] call CBA_fnc_registerChatCommand;
+};
+
+//Custom Ares module
+if (isClass (configfile >> "CfgPatches" >> "achilles_data_f_achilles" )) then {
+  ["OMF", "Begin mission", {coldstart = false; publicVariable "coldstart";}] call Ares_fnc_RegisterCustomModule;
+  ["OMF", "Safety - nouzový fix", {[[false],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;
+  ["OMF", "Enhanced arsenal", {execVM "scripts\arsenalenh.sqf"}] call Ares_fnc_RegisterCustomModule;
 };

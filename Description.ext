@@ -5,6 +5,12 @@ class Header {
 	maxPlayers = 128; 
 	playerCountMultipleOf = 1;
 };
+
+#include "LT\LTmenu.hpp"
+class CfgFunctions
+{
+#include "LT\cfgfunctions.hpp"
+};
 	
 class Params {
 	#include "cfgParams.hpp"
@@ -18,34 +24,6 @@ class CfgNotifications {
 		priority = 10;
 	};
 };
-
-
-class CfgVehicles {
-
-	class Scrapyard_base_F;
-    class Land_PaperBox_open_full_F: Scrapyard_base_F
-    {
-        maximumLoad = 2000;
-        transportMaxWeapons = 12;
-        transportMaxMagazines = 64;
-        transportMaxBackpacks = 12;
-		supplyRadius = 1.4;
-        class TransportMagazines {};
-        class TransportWeapons {};
-        class TransportItems {};
-    };
-
-    class ascz_arsenal_box: Land_PaperBox_open_full_F
-    {
-            displayName = "[OMF] Arsenal";
-            vehicleClass = "Ammo";
-            class eventHandlers
-            {
-                init = "_this select 0 addAction [""<img image='\A3\Ui_f\data\Logos\arsenal_1024_ca.paa' size='1.8' shadow=0.1 />"", { [""Open"", true] call BIS_fnc_arsenal; }, """", 6];";
-            };
-    };
-};
-
 
 class CfgRespawnTemplates {
 	class omf_respawnTemp {		

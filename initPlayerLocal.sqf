@@ -8,6 +8,7 @@
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
 private ["_infohrac","_infohracarr1","_infohracarr2","_msg","_zeusarr"];
+
 _zeusarr = [Zeus1,Zeus2,Zeus3,Zeus1C];
 //Get info about player
 _infohrac = squadParams player;
@@ -45,11 +46,17 @@ if (omf_welcomemsg == true) then {
    _infohracarr2 select 1, _infohracarr1 select 1, _infohracarr1 select 5, _infohracarr1 select 4];
 
   //Dát všem vědět, že se připojil další hráč
-  _msg =  format ["Hráč %1 ze Squadu %2 se právě připojil na server. Welcome!",name player, _infohracarr1 select 1];
+  _msg =  format ["Player %1 from squad %2 had just connected to the server. Welcome!",name player, _infohracarr1 select 1];
   _msg = str _msg;
   [_msg, "systemChat", true] call BIS_fnc_MP;
 };
 
+if (isClass (configfile >> "CfgPatches" >> "tfar_core") && !isClass (configfile >> "CfgPatches" >> "acre_main")) then {
+  player linkItem "TFAR_anprc152";
+};
+if (isClass (configfile >> "CfgPatches" >> "acre_main") && !isClass (configfile >> "CfgPatches" >> "tfar_core") then {
+  player addItemToBackpack "ACRE_PRC152";
+};
 //Vyčistit obrazovku od hintu
 sleep 20;
 hintSilent "";
