@@ -1,7 +1,7 @@
 //=====================================================================================
 // OMF Cold Start - Init
 // Credits: Brebera, F3 Framework
-// Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
+// Documentation: https://github.com/tenondra/OpenMissionFramework/wiki
 //=====================================================================================
 
 //Jestli neexistuje "coldstart" var, vytvořit ji - nastavit true

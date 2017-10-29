@@ -7,9 +7,11 @@ class Header {
 };
 
 #include "LT\LTmenu.hpp"
+
 class CfgFunctions
 {
-#include "LT\cfgfunctions.hpp"
+	#include "cfgFunctions.hpp"
+	#include "LT\cfgfunctions.hpp"
 };
 	
 class Params {

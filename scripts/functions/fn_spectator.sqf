@@ -1,7 +1,7 @@
 //=====================================================================================
 // OMF Spectator script
 // Credits: Brebera
-// Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
+// Dokumentace: https://github.com/tenondra/OpenMissionFramework/wiki
 //=====================================================================================
 
 private ["_cameraPos","_markerpos","_group","_unit","_camera","_killer1","_killer2"];

@@ -1,7 +1,7 @@
 //=====================================================================================
 // OMF Cold Start - safety script
 // Credits: F3 Framework, Brebera
-// Dokumentace: https://www.github.com/tenondra/TFRFramework/wiki
+// Documentation: https://github.com/tenondra/OpenMissionFramework/wiki
 //=====================================================================================
 
 omf_fnc_safety ={
@@ -9,12 +9,15 @@ omf_fnc_safety ={
 	if (isDedicated) exitwith {};
 
 	_zeusarr = [Zeus1,Zeus2,Zeus3,Zeus1C];
-	
+
 	switch (_this select 0) do
 	{
 		//Turn safety on
 		case true: {
 
+			if (player in _zeusarr) exitWith {
+				player allowDamage false;
+			};
 			//Delete bullets from fired weapons
 			if (isNil "omf_eh_safetyMan") then {
 			omf_eh_safetyMan = player addEventHandler["Fired", {deletevehicle (_this select 6);}];

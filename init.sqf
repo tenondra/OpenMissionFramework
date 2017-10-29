@@ -1,8 +1,10 @@
-//Init basic scripts
+//=====================================================================================
+// OMF Init
+// Credits: Brebera
+// Documentation: https://github.com/tenondra/OpenMissionFramework/wiki
+//=====================================================================================
 
 omf_welcomemsg = true;
-
-execVM "scripts\coldstart\fnc_safety.sqf";
 
 //Vypnout AI hlas, nastavit všechny hráče bez hlasu a vypnout arty comp.
 enableSaving [false, false];
@@ -26,7 +28,7 @@ if (isClass (configfile >> "CfgPatches" >> "cba_main")) then {
 
 //Custom Ares module
 if (isClass (configfile >> "CfgPatches" >> "achilles_data_f_achilles" )) then {
-  ["OMF", "Begin mission", {coldstart = false; publicVariable "coldstart";}] call Ares_fnc_RegisterCustomModule;
+  ["OMF", "Begin mission", {[] call omf_fnc_triggerstart;}] call Ares_fnc_RegisterCustomModule;
   ["OMF", "Safety - nouzový fix", {[[false],"omf_fnc_safety",playableUnits + switchableUnits] call BIS_fnc_MP;}] call Ares_fnc_RegisterCustomModule;
-  ["OMF", "Enhanced arsenal", {execVM "scripts\arsenalenh.sqf"}] call Ares_fnc_RegisterCustomModule;
+  ["OMF", "Enhanced arsenal", {execVM "scripts\omf_arsenalenh.sqf"}] call Ares_fnc_RegisterCustomModule;
 };
