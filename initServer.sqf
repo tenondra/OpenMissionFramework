@@ -1,3 +1,10 @@
+//=====================================================================================
+// Server init
+// Credits: Brebera
+// Documentation: https://github.com/tenondra/OpenMissionFramework/wiki
+//=====================================================================================
+
+
 ["Initialize"] call BIS_fnc_dynamicGroups;
 
 //Zaregistrovat proměnné

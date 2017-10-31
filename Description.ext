@@ -1,8 +1,8 @@
 class Header {
-	 
-	gameType = Sandbox; 
+
+	gameType = Sandbox;
 	minPlayers = 1;
-	maxPlayers = 128; 
+	maxPlayers = 128;
 	playerCountMultipleOf = 1;
 };
 
@@ -13,7 +13,7 @@ class CfgFunctions
 	#include "cfgFunctions.hpp"
 	#include "LT\cfgfunctions.hpp"
 };
-	
+
 class Params {
 	#include "cfgParams.hpp"
 };
@@ -27,39 +27,28 @@ class CfgNotifications {
 	};
 };
 
-class CfgRespawnTemplates {
-	class omf_respawnTemp {		
-		onPlayerKilled = "\scripts\omf_spectator.sqf";		
-		onPlayerRespawn = "\scripts\omf_respawn.sqf";
-
-		respawn = 2;
-		respawnDelay = 10;
-		respawnOnStart = 1;
-	};
-};
-
-onLoadMission = "OpenMissionFramework 1.0 by Brebera, Arcanum"; 
+onLoadMission = "OpenMissionFramework 1.0 by Brebera, Arcanum";
 OnLoadName = "OpenMissionFramework 1.0 by Brebera, Arcanum";
 
 loadScreen = "omf_logo.jpg";
-OnLoadIntro = "OpenMissionFramework 1.0 by Brebera, Arcanum"; 
-OnLoadMissionTime = 1; 
-OnloadIntroTime = 1; 
+OnLoadIntro = "OpenMissionFramework 1.0 by Brebera, Arcanum";
+OnLoadMissionTime = 1;
+OnloadIntroTime = 1;
 
-overviewPicture = "omf_logo.jpg"; 
-overviewText = "OpenMissionFramework 1.0 by Brebera, Arcanum"; 
-overviewTextLocked = "OpenMissionFramework 1.0 by Brebera, Arcanum"; 
+overviewPicture = "omf_logo.jpg";
+overviewText = "OpenMissionFramework 1.0 by Brebera, Arcanum";
+overviewTextLocked = "OpenMissionFramework 1.0 by Brebera, Arcanum";
 
 author = "Brebera, Arcanum";
 
-scriptedPlayer = 1; 
-joinUnassigned = 1; 
+scriptedPlayer = 1;
+joinUnassigned = 1;
 
-respawnTemplates[] = {"omf_respawnTemp"};
-
-respawnButton = 0; 
+respawn = 2;
+respawnDelay = 10;
+respawnOnStart = 1;
+respawnButton = 0;
 respawnDialog = 0;
-respawnOnStart = 0;
 
 disabledAI = 1;
 enableDebugConsole = 1;

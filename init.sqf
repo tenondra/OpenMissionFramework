@@ -4,13 +4,13 @@
 // Documentation: https://github.com/tenondra/OpenMissionFramework/wiki
 //=====================================================================================
 
+
 omf_welcomemsg = true;
 
 //Vypnout AI hlas, nastavit všechny hráče bez hlasu a vypnout arty comp.
 enableSaving [false, false];
 enableSentences false;
 enableRadio false;
-
 {_x disableConversation true} forEach playableUnits;
 {_x setSpeaker "ace_novoice"} forEach playableUnits;
 

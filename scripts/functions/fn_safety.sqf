@@ -6,16 +6,14 @@
 
 omf_fnc_safety ={
 
-	if (isDedicated) exitwith {};
-
-	_zeusarr = [Zeus1,Zeus2,Zeus3,Zeus1C];
+	if (isServer) exitwith {};
 
 	switch (_this select 0) do
 	{
 		//Turn safety on
 		case true: {
 
-			if (player in _zeusarr) exitWith {
+			if (player isKindof "virtualcurator_f") exitWith {
 				player allowDamage false;
 			};
 			//Delete bullets from fired weapons
@@ -39,7 +37,7 @@ omf_fnc_safety ={
 		//Turn safety off
 		case false: {
 
-			if (player in _zeusarr) exitWith {
+			if (player isKindof "virtualcurator_f") exitWith {
 				player allowDamage false;
 			};
 
@@ -62,7 +60,7 @@ omf_fnc_safety ={
 
 			// Make player vulnerable
 			player allowDamage true;
-			if (player in _zeusarr) exitWith {
+			if (player isKindof "virtualcurator_f") exitWith {
 				player allowDamage false;
 			};
 		};

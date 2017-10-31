@@ -1,4 +1,9 @@
-//Fix TFAR v1.0 zeus
+//=====================================================================================
+// Fixes TFAR 1.0 and later
+// Credits: Brebera
+// Documentation: https://github.com/tenondra/OpenMissionFramework/wiki
+//=====================================================================================
+
 {
 	if (!isnull (getassignedcuratorunit _x)) then {
 		_unit = getassignedcuratorunit _x;

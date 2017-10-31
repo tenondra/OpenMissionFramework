@@ -39,9 +39,9 @@ cutText ["You died. Now you can communicate with your death friends and also hea
 sleep 5;
 hintSilent "";
 
-if isClass (configFile >> "CfgPatches" >> "tfar_core" )) then {
+if (isClass (configFile >> "CfgPatches" >> "tfar_core" )) then {
 
 };
-if isClass (configFile >> "CfgPatches" >> "acre2" )) then {
+if (isClass (configFile >> "CfgPatches" >> "acre2" )) then {
 
 };

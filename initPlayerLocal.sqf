@@ -9,18 +9,19 @@
 
 private ["_infohrac","_infohracarr1","_infohracarr2","_msg","_zeusarr"];
 
-_zeusarr = [Zeus1,Zeus2,Zeus3,Zeus1C];
+
 //Get info about player
 _infohrac = squadParams player;
 _infohracarr1 = _infohrac select 0;
 _infohracarr2 = _infohrac select 1;
 
-if (omf_welcomemsg == true) then {
-  if (player isKindOf Curator ) exitWith {
+if (player isKindof "virtualcurator_f") then {
+  if (omf_welcomemsg == true) then {
     _msg =  format ["Zeus %1 from squad %2 had just connected. Welcome!",name player, _infohracarr1 select 1];
     _msg = str _msg;
     [_msg, "systemChat", true] call BIS_fnc_MP;
   };
+  else exitWith {};
 };
 
 //Wait for player to sync with server
@@ -54,9 +55,10 @@ if (omf_welcomemsg == true) then {
 if (isClass (configfile >> "CfgPatches" >> "tfar_core") && !isClass (configfile >> "CfgPatches" >> "acre_main")) then {
   player linkItem "TFAR_anprc152";
 };
-if (isClass (configfile >> "CfgPatches" >> "acre_main") && !isClass (configfile >> "CfgPatches" >> "tfar_core") then {
+if (isClass (configfile >> "CfgPatches" >> "acre_main") && !isClass (configfile >> "CfgPatches" >> "tfar_core")) then {
   player addItemToBackpack "ACRE_PRC152";
 };
-//Vyčistit obrazovku od hintu
+
+//Clear hint
 sleep 20;
 hintSilent "";
